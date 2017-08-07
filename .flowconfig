@@ -1,0 +1,14 @@
+[ignore]
+.*/node_modules/.*
+.*/transpiled/.*
+.*/test.js
+
+[include]
+./source/
+
+[libs]
+flow-typed/
+types/
+
+[options]
+all=true
