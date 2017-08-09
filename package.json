@@ -23,7 +23,9 @@
     "pretest": "npm run build",
     "test": "tap --reporter min './transpiled/test.js'",
     "build": "babel './source.js' './test.js' -d './transpiled/'",
-    "lint": "eslint './source.js'"
+    "lint": "eslint './source.js'",
+    "flowcheck": "flow check",
+    "ci": "npm run lint && npm run flowcheck && npm run test"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
