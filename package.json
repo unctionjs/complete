@@ -19,7 +19,7 @@
   "bugs": "https://github.com/unctionjs/tempLate/issues",
   "main": "transpiled/source.js",
   "scripts": {
-    "postinstall": "npm run build",
+    "postinstall": "npm run build && flow-typed install",
     "pretest": "npm run build",
     "test": "tap --reporter min './transpiled/test.js'",
     "build": "babel './source.js' './test.js' -d './transpiled/'",
