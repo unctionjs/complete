@@ -43,8 +43,8 @@
     "eslint-plugin-promise": "3.5.0",
     "flow": "0.2.3",
     "flow-bin": "0.51.1",
-    "flow-typed": "2.1.3",
-    "tap": "10.3.3"
+    "flow-typed": "2.1.5",
+    "tap": "10.3.4"
   },
   "dependencies": {
     "@unction/allobjectp": "*",
