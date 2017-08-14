@@ -21,7 +21,7 @@
   "scripts": {
     "postinstall": "npm run build && flow-typed install",
     "pretest": "npm run build",
-    "test": "tap --reporter min './transpiled/test.js'",
+    "test": "tap './transpiled/test.js'",
     "build": "babel './source.js' './test.js' -d './transpiled/'",
     "lint": "eslint './source.js'",
     "flowcheck": "flow check",
