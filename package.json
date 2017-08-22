@@ -19,18 +19,19 @@
   "bugs": "https://github.com/unctionjs/tempLate/issues",
   "main": "transpiled/source.js",
   "scripts": {
-    "postinstall": "npm run build && flow-typed install",
-    "pretest": "npm run build",
-    "test": "tap './transpiled/test.js'",
-    "build": "babel './source.js' './test.js' -d './transpiled/'",
+    "prepublishOnly": "npm run build",
+    "prepare": "flow-typed install",
+    "test": "NODE_ENV=test tap --100 './test.js'",
+    "build": "babel './source.js' -d './transpiled/'",
     "lint": "eslint './source.js'",
-    "flowcheck": "flow check",
-    "ci": "npm run lint && npm run flowcheck && npm run test"
+    "check": "flow check",
+    "ci": "npm run build && npm run lint && npm run check && npm run test"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
+    "babel-plugin-istanbul": "4.1.4",
     "babel-plugin-pipe-operator-curry": "1.0.2",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-env": "1.6.0",
@@ -44,6 +45,7 @@
     "flow": "0.2.3",
     "flow-bin": "0.51.1",
     "flow-typed": "2.1.5",
+    "nyc": "11.1.0",
     "tap": "10.3.4"
   },
   "dependencies": {
@@ -121,5 +123,12 @@
     "@unction/upto": "*",
     "@unction/withoutkeyrecursive": "*",
     "@unction/zip": "*"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
   }
 }
