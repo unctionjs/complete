@@ -25,7 +25,8 @@
     "build": "babel './source.js' -d './transpiled/'",
     "lint": "eslint './source.js'",
     "check": "flow check",
-    "ci": "npm run build && npm run lint && npm run check && npm run test"
+    "ci": "npm run build && npm run lint && npm run check && npm run test",
+    "watch": "chokidar './source.js' './test.js' --command 'npm run ci --silent'"
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
@@ -36,6 +37,7 @@
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-flow": "6.23.0",
+    "chokidar-cli": "1.2.0",
     "eslint": "3.19.0",
     "eslint-plugin-babel": "4.1.2",
     "eslint-plugin-flowtype": "2.35.0",
