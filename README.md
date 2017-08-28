@@ -299,7 +299,7 @@ But also logs:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> ValueType -> IterableType -> IterableType
+> KeyType -> ValueType -> FunctorType -> FunctorType
 
 A polymorphic way to attach a value to an iterable
 
@@ -319,7 +319,7 @@ attach("hello")("world")({}) // => {hello: "world"}
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<UnfinishedKeyChainType> -> IterableType -> ValueType
+> Array<UnfinishedKeyChainType> -> FunctorType -> ValueType
 
 Cascades through multiple keychains in order to arrive at a value. Null keys are replaced with the previous keychain's value.
 
@@ -696,7 +696,7 @@ But also logs:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> ValueType -> IterableType -> IterableType
+> KeyType -> ValueType -> FunctorType -> FunctorType
 
 A polymorphic way to attach a value to an iterable
 
@@ -716,7 +716,7 @@ attach("hello")("world")({}) // => {hello: "world"}
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<UnfinishedKeyChainType> -> IterableType -> ValueType
+> Array<UnfinishedKeyChainType> -> FunctorType -> ValueType
 
 Cascades through multiple keychains in order to arrive at a value. Null keys are replaced with the previous keychain's value.
 
@@ -1093,7 +1093,7 @@ But also logs:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> ValueType -> IterableType -> IterableType
+> KeyType -> ValueType -> FunctorType -> FunctorType
 
 A polymorphic way to attach a value to an iterable
 
@@ -1113,7 +1113,7 @@ attach("hello")("world")({}) // => {hello: "world"}
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<UnfinishedKeyChainType> -> IterableType -> ValueType
+> Array<UnfinishedKeyChainType> -> FunctorType -> ValueType
 
 Cascades through multiple keychains in order to arrive at a value. Null keys are replaced with the previous keychain's value.
 
@@ -1490,7 +1490,7 @@ But also logs:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> ValueType -> IterableType -> IterableType
+> KeyType -> ValueType -> FunctorType -> FunctorType
 
 A polymorphic way to attach a value to an iterable
 
@@ -1510,7 +1510,7 @@ attach("hello")("world")({}) // => {hello: "world"}
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<UnfinishedKeyChainType> -> IterableType -> ValueType
+> Array<UnfinishedKeyChainType> -> FunctorType -> ValueType
 
 Cascades through multiple keychains in order to arrive at a value. Null keys are replaced with the previous keychain's value.
 
@@ -1615,7 +1615,7 @@ See: https://github.com/unctionjs/complete
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> mixed) -> KeyChainType -> IterableType -> IterableType
+> (FunctorType -> mixed) -> KeyChainType -> FunctorType -> FunctorType
 
 Given an object this function will return that object but with a new property, where the value is computed. The computation is given the object you'll be copying.
 
@@ -1790,7 +1790,7 @@ Returns both resolved and rejected promises as distinct lists.
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
 
 Takes a tree and creates a single object where the root keys are conjoined nested keys.
 
@@ -1852,7 +1852,7 @@ flip(key)({aaa: "1"})("aaa") // "1"
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> KeyType -> any) -> IterableType -> IterableType
+> (any -> KeyType -> any) -> FunctorType -> FunctorType
 
 Takes any kind of iterable object and figures out the best way to iterate over it.
 
@@ -1873,7 +1873,7 @@ forEach((x) => y)({})
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType
+> FunctorType -> FunctorType
 
 Takes a iterable and returns an empty fresh version of that iterable.
 
@@ -1895,7 +1895,7 @@ fresh([]) // []
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> IterableType -> IterableType
+> KeyType -> FunctorType -> FunctorType
 
 Use this to de-nest a nested object.
 
@@ -2210,7 +2210,7 @@ lacksPuncation(data) // false
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (KeyType -> KeyType) -> IterableType -> IterableType
+> (KeyType -> KeyType) -> FunctorType -> FunctorType
 
 Like ramda's map, but instead of the value it maps over keys.
 
@@ -2244,7 +2244,7 @@ Would return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (ValueType => KeyType => KeyType) -> IterableType -> IterableType
+> (ValueType => KeyType => KeyType) -> FunctorType -> FunctorType
 
 Map over keys with the context of the value and key.
 
@@ -2277,7 +2277,7 @@ Would return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> any) -> IterableType -> IterableType
+> (any -> any) -> FunctorType -> FunctorType
 
 A pretty standard `mapValues()`, but with enforced unary currying.
 
@@ -2307,7 +2307,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any => KeyType => any) -> IterableType -> IterableType
+> (any => KeyType => any) -> FunctorType -> FunctorType
 
 Just like map, but gives back the index argument (as an integer, not a string if array)
 
@@ -2321,7 +2321,7 @@ Just like map, but gives back the index argument (as an integer, not a string if
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<IterableType> -> IterableType
+> Array<FunctorType> -> FunctorType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -2340,7 +2340,7 @@ mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "b
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<IterableType> -> IterableType
+> Array<FunctorType> -> FunctorType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -2359,7 +2359,7 @@ mergeAllRight([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType => IterableType => IterableType
+> FunctorType => FunctorType => FunctorType
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers left. THAT IS ALL.
 
@@ -2433,7 +2433,7 @@ mergeDeepLeft(left)(right)
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers right. THAT IS ALL.
 
@@ -2508,7 +2508,7 @@ mergeDeepRight(left)(right)
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables, preferring left.
 
@@ -2547,7 +2547,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables, preferring right.
 
@@ -2586,7 +2586,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (ValueType -> ValueType -> ValueType) -> IterableType -> IterableType -> IterableType
+> (ValueType -> ValueType -> ValueType) -> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the the left value and the right value.
 
@@ -2627,7 +2627,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> IterableType -> KeyType -> any) -> IterableType -> IterableType -> IterableType
+> (FunctorType -> FunctorType -> KeyType -> any) -> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the key, the left value, and the right value.
 
@@ -2662,7 +2662,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
 
 Takes a function (the application) that takes function(s) (later referred to as
 the inner) and value(s) (`map()`, `forEach()`, `find()`), a function (the inner)
@@ -2872,9 +2872,9 @@ You would get the following:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateType -> IterableType -> [IterableType, IterableType]
+> PredicateType -> FunctorType -> [FunctorType, FunctorType]
 
-This function takes an IterableType and returns an array of two IterableTypes,
+This function takes an FunctorType and returns an array of two FunctorTypes,
 the first of which contains elements which satisfy the predicate,
 the second of which contains element which do not.
 
@@ -2893,7 +2893,7 @@ partition(isOdd)([1,2,3,4]) // [[1,3],[2,4]]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyChainType -> IterableType -> Array<any>
+> KeyChainType -> FunctorType -> Array<any>
 
 Given a keychain and records return the values at the keychain for each record.
 
@@ -2943,7 +2943,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<KeyChainType> -> IterableType -> Array<any>
+> Array<KeyChainType> -> FunctorType -> Array<any>
 
 Given keychain and records, return the values at the keychain for each record.
 
@@ -3018,7 +3018,7 @@ prepend(4)([5]) // => [4, 5]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyChain -> any -> IterableType
+> KeyChain -> any -> FunctorType
 
 Given a keychain and a value it creates an object that has keys based on the keychain.
 
@@ -3048,7 +3048,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 Reduce over a iterable's values.
 
@@ -3080,7 +3080,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 A pretty standard `reduceWithValueKey()`, but where the `𝑓()` is unary curries.
 
@@ -3131,7 +3131,7 @@ Credit: @keithamus
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateType -> ValueType -> IterableType
+> PredicateType -> ValueType -> FunctorType
 
 Replaces values in an iterable with another value based on a predicate.
 
@@ -3369,7 +3369,7 @@ thrush(0)((value) => `${value}`) // "0"
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<(any -> IterableType -> IterableType)> -> Array<IterableType> -> IterableType
+> Array<(any -> FunctorType -> FunctorType)> -> Array<FunctorType> -> FunctorType
 
 This takes a list of functions (the folders) and an array of objects or an
 object of objects (the collection) to create a tree. Each function in
@@ -3531,7 +3531,7 @@ Just takes a maximum and produces an array of 1 to that number.
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> IterableType -> IterableType
+> KeyType -> FunctorType -> FunctorType
 
 Returns a copy of an iterable without a key, no matter how deep the tree.
 
@@ -3610,7 +3610,7 @@ returns
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> Array<ValueType>
+> FunctorType -> Array<ValueType>
 
 Takes an iterable and returns it's values.
 
@@ -3630,7 +3630,7 @@ values(["aaa", "bbb"]) // ["aaa", "bbb"]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 Reduce over a iterable's keys.
 
@@ -3661,7 +3661,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyedIterableType -> Array<KeyType>
+> KeyedFunctorType -> Array<KeyType>
 
 Takes a keyed iterable and returns the keys as an Array.
 
@@ -3718,7 +3718,7 @@ fromArrayToObject([["aaa", "1"], ["bbb", "2"]]) // {aaa: 1, bbb: 2}
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> mixed) -> KeyChainType -> IterableType -> IterableType
+> (FunctorType -> mixed) -> KeyChainType -> FunctorType -> FunctorType
 
 Given an object this function will return that object but with a new property, where the value is computed. The computation is given the object you'll be copying.
 
@@ -3893,7 +3893,7 @@ Returns both resolved and rejected promises as distinct lists.
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
 
 Takes a tree and creates a single object where the root keys are conjoined nested keys.
 
@@ -3955,7 +3955,7 @@ flip(key)({aaa: "1"})("aaa") // "1"
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> KeyType -> any) -> IterableType -> IterableType
+> (any -> KeyType -> any) -> FunctorType -> FunctorType
 
 Takes any kind of iterable object and figures out the best way to iterate over it.
 
@@ -3976,7 +3976,7 @@ forEach((x) => y)({})
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType
+> FunctorType -> FunctorType
 
 Takes a iterable and returns an empty fresh version of that iterable.
 
@@ -3998,7 +3998,7 @@ fresh([]) // []
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> IterableType -> IterableType
+> KeyType -> FunctorType -> FunctorType
 
 Use this to de-nest a nested object.
 
@@ -4313,7 +4313,7 @@ lacksPuncation(data) // false
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (KeyType -> KeyType) -> IterableType -> IterableType
+> (KeyType -> KeyType) -> FunctorType -> FunctorType
 
 Like ramda's map, but instead of the value it maps over keys.
 
@@ -4347,7 +4347,7 @@ Would return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (ValueType => KeyType => KeyType) -> IterableType -> IterableType
+> (ValueType => KeyType => KeyType) -> FunctorType -> FunctorType
 
 Map over keys with the context of the value and key.
 
@@ -4380,7 +4380,7 @@ Would return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> any) -> IterableType -> IterableType
+> (any -> any) -> FunctorType -> FunctorType
 
 A pretty standard `mapValues()`, but with enforced unary currying.
 
@@ -4410,7 +4410,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any => KeyType => any) -> IterableType -> IterableType
+> (any => KeyType => any) -> FunctorType -> FunctorType
 
 Just like map, but gives back the index argument (as an integer, not a string if array)
 
@@ -4424,7 +4424,7 @@ Just like map, but gives back the index argument (as an integer, not a string if
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<IterableType> -> IterableType
+> Array<FunctorType> -> FunctorType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -4443,7 +4443,7 @@ mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "b
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<IterableType> -> IterableType
+> Array<FunctorType> -> FunctorType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -4462,7 +4462,7 @@ mergeAllRight([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType => IterableType => IterableType
+> FunctorType => FunctorType => FunctorType
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers left. THAT IS ALL.
 
@@ -4536,7 +4536,7 @@ mergeDeepLeft(left)(right)
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers right. THAT IS ALL.
 
@@ -4611,7 +4611,7 @@ mergeDeepRight(left)(right)
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables, preferring left.
 
@@ -4650,7 +4650,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables, preferring right.
 
@@ -4689,7 +4689,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (ValueType -> ValueType -> ValueType) -> IterableType -> IterableType -> IterableType
+> (ValueType -> ValueType -> ValueType) -> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the the left value and the right value.
 
@@ -4730,7 +4730,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> IterableType -> KeyType -> any) -> IterableType -> IterableType -> IterableType
+> (FunctorType -> FunctorType -> KeyType -> any) -> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the key, the left value, and the right value.
 
@@ -4765,7 +4765,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
 
 Takes a function (the application) that takes function(s) (later referred to as
 the inner) and value(s) (`map()`, `forEach()`, `find()`), a function (the inner)
@@ -4975,9 +4975,9 @@ You would get the following:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateType -> IterableType -> [IterableType, IterableType]
+> PredicateType -> FunctorType -> [FunctorType, FunctorType]
 
-This function takes an IterableType and returns an array of two IterableTypes,
+This function takes an FunctorType and returns an array of two FunctorTypes,
 the first of which contains elements which satisfy the predicate,
 the second of which contains element which do not.
 
@@ -4996,7 +4996,7 @@ partition(isOdd)([1,2,3,4]) // [[1,3],[2,4]]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyChainType -> IterableType -> Array<any>
+> KeyChainType -> FunctorType -> Array<any>
 
 Given a keychain and records return the values at the keychain for each record.
 
@@ -5046,7 +5046,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<KeyChainType> -> IterableType -> Array<any>
+> Array<KeyChainType> -> FunctorType -> Array<any>
 
 Given keychain and records, return the values at the keychain for each record.
 
@@ -5121,7 +5121,7 @@ prepend(4)([5]) // => [4, 5]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyChain -> any -> IterableType
+> KeyChain -> any -> FunctorType
 
 Given a keychain and a value it creates an object that has keys based on the keychain.
 
@@ -5151,7 +5151,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 Reduce over a iterable's values.
 
@@ -5183,7 +5183,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 A pretty standard `reduceWithValueKey()`, but where the `𝑓()` is unary curries.
 
@@ -5234,7 +5234,7 @@ Credit: @keithamus
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateType -> ValueType -> IterableType
+> PredicateType -> ValueType -> FunctorType
 
 Replaces values in an iterable with another value based on a predicate.
 
@@ -5472,7 +5472,7 @@ thrush(0)((value) => `${value}`) // "0"
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<(any -> IterableType -> IterableType)> -> Array<IterableType> -> IterableType
+> Array<(any -> FunctorType -> FunctorType)> -> Array<FunctorType> -> FunctorType
 
 This takes a list of functions (the folders) and an array of objects or an
 object of objects (the collection) to create a tree. Each function in
@@ -5634,7 +5634,7 @@ Just takes a maximum and produces an array of 1 to that number.
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> IterableType -> IterableType
+> KeyType -> FunctorType -> FunctorType
 
 Returns a copy of an iterable without a key, no matter how deep the tree.
 
@@ -5713,7 +5713,7 @@ returns
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> Array<ValueType>
+> FunctorType -> Array<ValueType>
 
 Takes an iterable and returns it's values.
 
@@ -5733,7 +5733,7 @@ values(["aaa", "bbb"]) // ["aaa", "bbb"]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 Reduce over a iterable's keys.
 
@@ -5764,7 +5764,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyedIterableType -> Array<KeyType>
+> KeyedFunctorType -> Array<KeyType>
 
 Takes a keyed iterable and returns the keys as an Array.
 
@@ -5821,7 +5821,7 @@ fromArrayToObject([["aaa", "1"], ["bbb", "2"]]) // {aaa: 1, bbb: 2}
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> mixed) -> KeyChainType -> IterableType -> IterableType
+> (FunctorType -> mixed) -> KeyChainType -> FunctorType -> FunctorType
 
 Given an object this function will return that object but with a new property, where the value is computed. The computation is given the object you'll be copying.
 
@@ -5996,7 +5996,7 @@ Returns both resolved and rejected promises as distinct lists.
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
 
 Takes a tree and creates a single object where the root keys are conjoined nested keys.
 
@@ -6058,7 +6058,7 @@ flip(key)({aaa: "1"})("aaa") // "1"
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> KeyType -> any) -> IterableType -> IterableType
+> (any -> KeyType -> any) -> FunctorType -> FunctorType
 
 Takes any kind of iterable object and figures out the best way to iterate over it.
 
@@ -6079,7 +6079,7 @@ forEach((x) => y)({})
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType
+> FunctorType -> FunctorType
 
 Takes a iterable and returns an empty fresh version of that iterable.
 
@@ -6101,7 +6101,7 @@ fresh([]) // []
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> IterableType -> IterableType
+> KeyType -> FunctorType -> FunctorType
 
 Use this to de-nest a nested object.
 
@@ -6416,7 +6416,7 @@ lacksPuncation(data) // false
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (KeyType -> KeyType) -> IterableType -> IterableType
+> (KeyType -> KeyType) -> FunctorType -> FunctorType
 
 Like ramda's map, but instead of the value it maps over keys.
 
@@ -6450,7 +6450,7 @@ Would return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (ValueType => KeyType => KeyType) -> IterableType -> IterableType
+> (ValueType => KeyType => KeyType) -> FunctorType -> FunctorType
 
 Map over keys with the context of the value and key.
 
@@ -6483,7 +6483,7 @@ Would return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> any) -> IterableType -> IterableType
+> (any -> any) -> FunctorType -> FunctorType
 
 A pretty standard `mapValues()`, but with enforced unary currying.
 
@@ -6513,7 +6513,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any => KeyType => any) -> IterableType -> IterableType
+> (any => KeyType => any) -> FunctorType -> FunctorType
 
 Just like map, but gives back the index argument (as an integer, not a string if array)
 
@@ -6527,7 +6527,7 @@ Just like map, but gives back the index argument (as an integer, not a string if
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<IterableType> -> IterableType
+> Array<FunctorType> -> FunctorType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -6546,7 +6546,7 @@ mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "b
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<IterableType> -> IterableType
+> Array<FunctorType> -> FunctorType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -6565,7 +6565,7 @@ mergeAllRight([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType => IterableType => IterableType
+> FunctorType => FunctorType => FunctorType
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers left. THAT IS ALL.
 
@@ -6639,7 +6639,7 @@ mergeDeepLeft(left)(right)
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers right. THAT IS ALL.
 
@@ -6714,7 +6714,7 @@ mergeDeepRight(left)(right)
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables, preferring left.
 
@@ -6753,7 +6753,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables, preferring right.
 
@@ -6792,7 +6792,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (ValueType -> ValueType -> ValueType) -> IterableType -> IterableType -> IterableType
+> (ValueType -> ValueType -> ValueType) -> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the the left value and the right value.
 
@@ -6833,7 +6833,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> IterableType -> KeyType -> any) -> IterableType -> IterableType -> IterableType
+> (FunctorType -> FunctorType -> KeyType -> any) -> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the key, the left value, and the right value.
 
@@ -6868,7 +6868,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
 
 Takes a function (the application) that takes function(s) (later referred to as
 the inner) and value(s) (`map()`, `forEach()`, `find()`), a function (the inner)
@@ -7078,9 +7078,9 @@ You would get the following:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateType -> IterableType -> [IterableType, IterableType]
+> PredicateType -> FunctorType -> [FunctorType, FunctorType]
 
-This function takes an IterableType and returns an array of two IterableTypes,
+This function takes an FunctorType and returns an array of two FunctorTypes,
 the first of which contains elements which satisfy the predicate,
 the second of which contains element which do not.
 
@@ -7099,7 +7099,7 @@ partition(isOdd)([1,2,3,4]) // [[1,3],[2,4]]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyChainType -> IterableType -> Array<any>
+> KeyChainType -> FunctorType -> Array<any>
 
 Given a keychain and records return the values at the keychain for each record.
 
@@ -7149,7 +7149,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<KeyChainType> -> IterableType -> Array<any>
+> Array<KeyChainType> -> FunctorType -> Array<any>
 
 Given keychain and records, return the values at the keychain for each record.
 
@@ -7224,7 +7224,7 @@ prepend(4)([5]) // => [4, 5]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyChain -> any -> IterableType
+> KeyChain -> any -> FunctorType
 
 Given a keychain and a value it creates an object that has keys based on the keychain.
 
@@ -7254,7 +7254,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 Reduce over a iterable's values.
 
@@ -7286,7 +7286,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 A pretty standard `reduceWithValueKey()`, but where the `𝑓()` is unary curries.
 
@@ -7337,7 +7337,7 @@ Credit: @keithamus
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateType -> ValueType -> IterableType
+> PredicateType -> ValueType -> FunctorType
 
 Replaces values in an iterable with another value based on a predicate.
 
@@ -7575,7 +7575,7 @@ thrush(0)((value) => `${value}`) // "0"
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<(any -> IterableType -> IterableType)> -> Array<IterableType> -> IterableType
+> Array<(any -> FunctorType -> FunctorType)> -> Array<FunctorType> -> FunctorType
 
 This takes a list of functions (the folders) and an array of objects or an
 object of objects (the collection) to create a tree. Each function in
@@ -7737,7 +7737,7 @@ Just takes a maximum and produces an array of 1 to that number.
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> IterableType -> IterableType
+> KeyType -> FunctorType -> FunctorType
 
 Returns a copy of an iterable without a key, no matter how deep the tree.
 
@@ -7816,7 +7816,7 @@ returns
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> Array<ValueType>
+> FunctorType -> Array<ValueType>
 
 Takes an iterable and returns it's values.
 
@@ -7836,7 +7836,7 @@ values(["aaa", "bbb"]) // ["aaa", "bbb"]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 Reduce over a iterable's keys.
 
@@ -7867,7 +7867,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyedIterableType -> Array<KeyType>
+> KeyedFunctorType -> Array<KeyType>
 
 Takes a keyed iterable and returns the keys as an Array.
 
@@ -7924,7 +7924,7 @@ fromArrayToObject([["aaa", "1"], ["bbb", "2"]]) // {aaa: 1, bbb: 2}
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> mixed) -> KeyChainType -> IterableType -> IterableType
+> (FunctorType -> mixed) -> KeyChainType -> FunctorType -> FunctorType
 
 Given an object this function will return that object but with a new property, where the value is computed. The computation is given the object you'll be copying.
 
@@ -8099,7 +8099,7 @@ Returns both resolved and rejected promises as distinct lists.
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
 
 Takes a tree and creates a single object where the root keys are conjoined nested keys.
 
@@ -8161,7 +8161,7 @@ flip(key)({aaa: "1"})("aaa") // "1"
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> KeyType -> any) -> IterableType -> IterableType
+> (any -> KeyType -> any) -> FunctorType -> FunctorType
 
 Takes any kind of iterable object and figures out the best way to iterate over it.
 
@@ -8182,7 +8182,7 @@ forEach((x) => y)({})
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType
+> FunctorType -> FunctorType
 
 Takes a iterable and returns an empty fresh version of that iterable.
 
@@ -8204,7 +8204,7 @@ fresh([]) // []
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> IterableType -> IterableType
+> KeyType -> FunctorType -> FunctorType
 
 Use this to de-nest a nested object.
 
@@ -8519,7 +8519,7 @@ lacksPuncation(data) // false
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (KeyType -> KeyType) -> IterableType -> IterableType
+> (KeyType -> KeyType) -> FunctorType -> FunctorType
 
 Like ramda's map, but instead of the value it maps over keys.
 
@@ -8553,7 +8553,7 @@ Would return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (ValueType => KeyType => KeyType) -> IterableType -> IterableType
+> (ValueType => KeyType => KeyType) -> FunctorType -> FunctorType
 
 Map over keys with the context of the value and key.
 
@@ -8586,7 +8586,7 @@ Would return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> any) -> IterableType -> IterableType
+> (any -> any) -> FunctorType -> FunctorType
 
 A pretty standard `mapValues()`, but with enforced unary currying.
 
@@ -8616,7 +8616,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any => KeyType => any) -> IterableType -> IterableType
+> (any => KeyType => any) -> FunctorType -> FunctorType
 
 Just like map, but gives back the index argument (as an integer, not a string if array)
 
@@ -8630,7 +8630,7 @@ Just like map, but gives back the index argument (as an integer, not a string if
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<IterableType> -> IterableType
+> Array<FunctorType> -> FunctorType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -8649,7 +8649,7 @@ mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "b
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<IterableType> -> IterableType
+> Array<FunctorType> -> FunctorType
 
 Merges a list of iterables (of the same type) into a single iterable.
 
@@ -8668,7 +8668,7 @@ mergeAllRight([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType => IterableType => IterableType
+> FunctorType => FunctorType => FunctorType
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers left. THAT IS ALL.
 
@@ -8742,7 +8742,7 @@ mergeDeepLeft(left)(right)
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers right. THAT IS ALL.
 
@@ -8817,7 +8817,7 @@ mergeDeepRight(left)(right)
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables, preferring left.
 
@@ -8856,7 +8856,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> IterableType -> IterableType
+> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables, preferring right.
 
@@ -8895,7 +8895,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (ValueType -> ValueType -> ValueType) -> IterableType -> IterableType -> IterableType
+> (ValueType -> ValueType -> ValueType) -> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the the left value and the right value.
 
@@ -8936,7 +8936,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (IterableType -> IterableType -> KeyType -> any) -> IterableType -> IterableType -> IterableType
+> (FunctorType -> FunctorType -> KeyType -> any) -> FunctorType -> FunctorType -> FunctorType
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the key, the left value, and the right value.
 
@@ -8971,7 +8971,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> ((any -> any) -> IterableType -> IterableType) -> (any -> any) -> number -> IterableType -> IterableType
+> ((any -> any) -> FunctorType -> FunctorType) -> (any -> any) -> number -> FunctorType -> FunctorType
 
 Takes a function (the application) that takes function(s) (later referred to as
 the inner) and value(s) (`map()`, `forEach()`, `find()`), a function (the inner)
@@ -9181,9 +9181,9 @@ You would get the following:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateType -> IterableType -> [IterableType, IterableType]
+> PredicateType -> FunctorType -> [FunctorType, FunctorType]
 
-This function takes an IterableType and returns an array of two IterableTypes,
+This function takes an FunctorType and returns an array of two FunctorTypes,
 the first of which contains elements which satisfy the predicate,
 the second of which contains element which do not.
 
@@ -9202,7 +9202,7 @@ partition(isOdd)([1,2,3,4]) // [[1,3],[2,4]]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyChainType -> IterableType -> Array<any>
+> KeyChainType -> FunctorType -> Array<any>
 
 Given a keychain and records return the values at the keychain for each record.
 
@@ -9252,7 +9252,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<KeyChainType> -> IterableType -> Array<any>
+> Array<KeyChainType> -> FunctorType -> Array<any>
 
 Given keychain and records, return the values at the keychain for each record.
 
@@ -9327,7 +9327,7 @@ prepend(4)([5]) // => [4, 5]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyChain -> any -> IterableType
+> KeyChain -> any -> FunctorType
 
 Given a keychain and a value it creates an object that has keys based on the keychain.
 
@@ -9357,7 +9357,7 @@ Which returns:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 Reduce over a iterable's values.
 
@@ -9389,7 +9389,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> ValueType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 A pretty standard `reduceWithValueKey()`, but where the `𝑓()` is unary curries.
 
@@ -9440,7 +9440,7 @@ Credit: @keithamus
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> PredicateType -> ValueType -> IterableType
+> PredicateType -> ValueType -> FunctorType
 
 Replaces values in an iterable with another value based on a predicate.
 
@@ -9678,7 +9678,7 @@ thrush(0)((value) => `${value}`) // "0"
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> Array<(any -> IterableType -> IterableType)> -> Array<IterableType> -> IterableType
+> Array<(any -> FunctorType -> FunctorType)> -> Array<FunctorType> -> FunctorType
 
 This takes a list of functions (the folders) and an array of objects or an
 object of objects (the collection) to create a tree. Each function in
@@ -9840,7 +9840,7 @@ Just takes a maximum and produces an array of 1 to that number.
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyType -> IterableType -> IterableType
+> KeyType -> FunctorType -> FunctorType
 
 Returns a copy of an iterable without a key, no matter how deep the tree.
 
@@ -9919,7 +9919,7 @@ returns
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> IterableType -> Array<ValueType>
+> FunctorType -> Array<ValueType>
 
 Takes an iterable and returns it's values.
 
@@ -9939,7 +9939,7 @@ values(["aaa", "bbb"]) // ["aaa", "bbb"]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> IterableType -> AccumulatedType
+> (AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
 
 Reduce over a iterable's keys.
 
@@ -9970,7 +9970,7 @@ Which will return:
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> KeyedIterableType -> Array<KeyType>
+> KeyedFunctorType -> Array<KeyType>
 
 Takes a keyed iterable and returns the keys as an Array.
 
