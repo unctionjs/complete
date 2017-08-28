@@ -6,7 +6,7 @@
 .*/test.js
 
 [include]
-./source.js
+./index.js
 
 [libs]
 flow-typed/
