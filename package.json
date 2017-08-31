@@ -154,5 +154,8 @@
     ],
     "sourceMap": false,
     "instrument": false
-  }
+  },
+  "files": [
+    "transpiled/index.js"
+  ]
 }
