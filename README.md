@@ -45,7 +45,7 @@ import {hammer} from "@unction/complete"
 
 See below for each function's documentation or their individual github readmes.
 
-## [allObjectP()](https://github.com/unctionjs/allObjectP#readme) [3.1.0]/allObjectP
+## [allObjectP()](https://github.com/unctionjs/allObjectP#readme) [3.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -94,7 +94,7 @@ If we use `allP` or `Promise.all` we're getting an array back, but that's annoyi
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/allObjectP.svg?maxAge=2592000&style=flat-square
 
-## [allP()](https://github.com/unctionjs/allP#readme) [2.1.0]/allP
+## [allP()](https://github.com/unctionjs/allP#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -114,7 +114,7 @@ Credit: @keithamus
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/allP.svg?maxAge=2592000&style=flat-square
 
-## [always()](https://github.com/unctionjs/always#readme) [2.1.0]/always
+## [always()](https://github.com/unctionjs/always#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -137,7 +137,7 @@ always(1)(0) // 1
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/always.svg?maxAge=2592000&style=flat-square
 
-## [append()](https://github.com/unctionjs/append#readme) [2.2.0]/append
+## [append()](https://github.com/unctionjs/append#readme) [2.2.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -163,7 +163,7 @@ NOTE: While there is a type annotation in the README, this function cannot have 
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/append.svg?maxAge=2592000&style=flat-square
 
-## [appendM()](https://github.com/unctionjs/appendM#readme) [2.1.0]/appendM
+## [appendM()](https://github.com/unctionjs/appendM#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -195,7 +195,7 @@ Would return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/appendM.svg?maxAge=2592000&style=flat-square
 
-## [applicator()](https://github.com/unctionjs/applicator#readme) [2.1.0]/applicator
+## [applicator()](https://github.com/unctionjs/applicator#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -217,7 +217,7 @@ applicator(inc)(1) // 1
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/applicator.svg?maxAge=2592000&style=flat-square
 
-## [applicators()](https://github.com/unctionjs/applicators#readme) [2.1.0]/applicators
+## [applicators()](https://github.com/unctionjs/applicators#readme) [2.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -274,7 +274,7 @@ returns
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/applicators.svg?maxAge=2592000&style=flat-square
 
-## [arrayify()](https://github.com/unctionjs/arrayify#readme) [2.1.0]/arrayify
+## [arrayify()](https://github.com/unctionjs/arrayify#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -312,7 +312,7 @@ returns
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/arrayify.svg?maxAge=2592000&style=flat-square
 
-## [aside()](https://github.com/unctionjs/aside#readme) [3.1.0]/aside
+## [aside()](https://github.com/unctionjs/aside#readme) [3.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -343,7 +343,7 @@ But also logs:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/aside.svg?maxAge=2592000&style=flat-square
 
-## [attach()](https://github.com/unctionjs/attach#readme) [3.1.0]/attach
+## [attach()](https://github.com/unctionjs/attach#readme) [3.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -367,7 +367,7 @@ attach(0)("a")("bc") // => "abc"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/attach.svg?maxAge=2592000&style=flat-square
 
-## [cascadingKeyChain()](https://github.com/unctionjs/cascadingKeyChain#readme) [2.0.1]/cascadingKeyChain
+## [cascadingKeyChain()](https://github.com/unctionjs/cascadingKeyChain#readme) [2.0.1]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -419,7 +419,7 @@ returns
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/cascadingKeyChain.svg?maxAge=2592000&style=flat-square
 
-## [catchP()](https://github.com/unctionjs/catchP#readme) [2.1.0]/catchP
+## [catchP()](https://github.com/unctionjs/catchP#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -439,7 +439,7 @@ Credit: @keithamus
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/catchP.svg?maxAge=2592000&style=flat-square
 
-## [compact()](https://github.com/unctionjs/compact#readme) [2.1.0]/compact
+## [compact()](https://github.com/unctionjs/compact#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -466,7 +466,7 @@ compact(head(users)) // {"name": "Kurtis Rainbolt-Greene"}
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/compact.svg?maxAge=2592000&style=flat-square
 
-## [computedProp()](https://github.com/unctionjs/computedProp#readme) [3.1.0]/computedProp
+## [computedProp()](https://github.com/unctionjs/computedProp#readme) [3.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -527,7 +527,7 @@ Would return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/computedProp.svg?maxAge=2592000&style=flat-square
 
-## [couple()](https://github.com/unctionjs/couple#readme) [2.1.0]/couple
+## [couple()](https://github.com/unctionjs/couple#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -549,7 +549,7 @@ couple(4)(5) // => [4, 5]
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/couple.svg?maxAge=2592000&style=flat-square
 
-## [domEvents()](https://github.com/unctionjs/domEvents#readme) [2.1.0]/domEvents
+## [domEvents()](https://github.com/unctionjs/domEvents#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -577,7 +577,7 @@ returns
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/domEvents.svg?maxAge=2592000&style=flat-square
 
-## [domEventsMany()](https://github.com/unctionjs/domEventsMany#readme) [2.1.0]/domEventsMany
+## [domEventsMany()](https://github.com/unctionjs/domEventsMany#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -615,7 +615,7 @@ returns
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/domEventsMany.svg?maxAge=2592000&style=flat-square
 
-## [endsWith()](https://github.com/unctionjs/endsWith#readme) [2.1.0]/endsWith
+## [endsWith()](https://github.com/unctionjs/endsWith#readme) [2.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -635,7 +635,7 @@ endsWith("!")("Hello, world!") // true
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/endsWith.svg?maxAge=2592000&style=flat-square
 
-## [everyP()](https://github.com/unctionjs/everyP#readme) [2.1.0]/everyP
+## [everyP()](https://github.com/unctionjs/everyP#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -653,7 +653,7 @@ Returns both resolved and rejected promises as distinct lists.
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/everyP.svg?maxAge=2592000&style=flat-square
 
-## [flattenTree()](https://github.com/unctionjs/flattenTree#readme) [2.1.0]/flattenTree
+## [flattenTree()](https://github.com/unctionjs/flattenTree#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -697,7 +697,7 @@ Would return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/flattenTree.svg?maxAge=2592000&style=flat-square
 
-## [flip()](https://github.com/unctionjs/flip#readme) [2.1.0]/flip
+## [flip()](https://github.com/unctionjs/flip#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -719,7 +719,7 @@ flip(key)({aaa: "1"})("aaa") // "1"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/flip.svg?maxAge=2592000&style=flat-square
 
-## [forEach()](https://github.com/unctionjs/forEach#readme) [2.1.0]/forEach
+## [forEach()](https://github.com/unctionjs/forEach#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -743,7 +743,7 @@ forEach((x) => y)({})
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/forEach.svg?maxAge=2592000&style=flat-square
 
-## [fresh()](https://github.com/unctionjs/fresh#readme) [3.0.0]/fresh
+## [fresh()](https://github.com/unctionjs/fresh#readme) [3.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -766,7 +766,7 @@ fresh([]) // []
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/fresh.svg?maxAge=2592000&style=flat-square
 
-## [hammer()](https://github.com/unctionjs/hammer#readme) [4.1.0]/hammer
+## [hammer()](https://github.com/unctionjs/hammer#readme) [4.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -806,7 +806,7 @@ Which returns:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/hammer.svg?maxAge=2592000&style=flat-square
 
-## [ifThenElse()](https://github.com/unctionjs/ifThenElse#readme) [2.1.0]/ifThenElse
+## [ifThenElse()](https://github.com/unctionjs/ifThenElse#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -829,7 +829,7 @@ ifThenElse(isEven)(toString)(toFloat)(2) // "2"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/ifThenElse.svg?maxAge=2592000&style=flat-square
 
-## [isArray()](https://github.com/unctionjs/isArray#readme) [2.0.0]/isArray
+## [isArray()](https://github.com/unctionjs/isArray#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -853,7 +853,7 @@ isArray("") // => false
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/isArray.svg?maxAge=2592000&style=flat-square
 
-## [isIterable()](https://github.com/unctionjs/isIterable#readme) [2.0.0]/isIterable
+## [isIterable()](https://github.com/unctionjs/isIterable#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -878,7 +878,7 @@ isIterable(1) // => false
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/isIterable.svg?maxAge=2592000&style=flat-square
 
-## [isNil()](https://github.com/unctionjs/isNil#readme) [2.0.0]/isNil
+## [isNil()](https://github.com/unctionjs/isNil#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -905,7 +905,7 @@ isNil({}) // false
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/isNil.svg?maxAge=2592000&style=flat-square
 
-## [isObject()](https://github.com/unctionjs/isObject#readme) [2.0.0]/isObject
+## [isObject()](https://github.com/unctionjs/isObject#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -929,7 +929,7 @@ isObject("") // => false
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/isObject.svg?maxAge=2592000&style=flat-square
 
-## [isPopulated()](https://github.com/unctionjs/isPopulated#readme) [4.0.0]/isPopulated
+## [isPopulated()](https://github.com/unctionjs/isPopulated#readme) [4.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -956,7 +956,7 @@ isPopulated("a") // true
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/isPopulated.svg?maxAge=2592000&style=flat-square
 
-## [isPresent()](https://github.com/unctionjs/isPresent#readme) [2.0.0]/isPresent
+## [isPresent()](https://github.com/unctionjs/isPresent#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -981,7 +981,7 @@ isPresent(undefined) // false
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/isPresent.svg?maxAge=2592000&style=flat-square
 
-## [isType()](https://github.com/unctionjs/isType#readme) [2.0.0]/isType
+## [isType()](https://github.com/unctionjs/isType#readme) [2.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -1004,7 +1004,7 @@ isType("String")("") // => true
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/isType.svg?maxAge=2592000&style=flat-square
 
-## [itself()](https://github.com/unctionjs/itself#readme) [2.0.0]/itself
+## [itself()](https://github.com/unctionjs/itself#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1027,7 +1027,7 @@ itself(1) // 1
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/itself.svg?maxAge=2592000&style=flat-square
 
-## [key()](https://github.com/unctionjs/key#readme) [4.0.2]/key
+## [key()](https://github.com/unctionjs/key#readme) [4.0.2]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1052,7 +1052,7 @@ key(0)(["aaa"]) // "aaa"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/key.svg?maxAge=2592000&style=flat-square
 
-## [keyChain()](https://github.com/unctionjs/keyChain#readme) [2.1.0]/keyChain
+## [keyChain()](https://github.com/unctionjs/keyChain#readme) [2.1.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1075,7 +1075,7 @@ keyChain(["aaa", "ddd", "ccc"])({aaa: {bbb: {ccc: "1"}}}) // undefined
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/keyChain.svg?maxAge=2592000&style=flat-square
 
-## [lacksText()](https://github.com/unctionjs/lacksText#readme) [2.0.0]/lacksText
+## [lacksText()](https://github.com/unctionjs/lacksText#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1107,7 +1107,7 @@ lacksPuncation(data) // false
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/lacksText.svg?maxAge=2592000&style=flat-square
 
-## [mapKeys()](https://github.com/unctionjs/mapKeys#readme) [3.0.0]/mapKeys
+## [mapKeys()](https://github.com/unctionjs/mapKeys#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1143,7 +1143,7 @@ Would return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mapKeys.svg?maxAge=2592000&style=flat-square
 
-## [mapKeysWithValueKey()](https://github.com/unctionjs/mapKeysWithValueKey#readme) [2.0.0]/mapKeysWithValueKey
+## [mapKeysWithValueKey()](https://github.com/unctionjs/mapKeysWithValueKey#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1178,7 +1178,7 @@ Would return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mapKeysWithValueKey.svg?maxAge=2592000&style=flat-square
 
-## [mapValues()](https://github.com/unctionjs/mapValues#readme) [3.0.0]/mapValues
+## [mapValues()](https://github.com/unctionjs/mapValues#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1210,7 +1210,7 @@ Which will return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mapValues.svg?maxAge=2592000&style=flat-square
 
-## [mapValuesWithValueKey()](https://github.com/unctionjs/mapValuesWithValueKey#readme) [2.0.0]/mapValuesWithValueKey
+## [mapValuesWithValueKey()](https://github.com/unctionjs/mapValuesWithValueKey#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1227,7 +1227,7 @@ Just like map, but gives back the index argument (as an integer, not a string if
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mapValuesWithValueKey.svg?maxAge=2592000&style=flat-square
 
-## [mergeAllLeft()](https://github.com/unctionjs/mergeAllLeft#readme) [2.0.0]/mergeAllLeft
+## [mergeAllLeft()](https://github.com/unctionjs/mergeAllLeft#readme) [2.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -1248,7 +1248,7 @@ mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "b
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeAllLeft.svg?maxAge=2592000&style=flat-square
 
-## [mergeAllRight()](https://github.com/unctionjs/mergeAllRight#readme) [2.0.0]/mergeAllRight
+## [mergeAllRight()](https://github.com/unctionjs/mergeAllRight#readme) [2.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -1269,7 +1269,7 @@ mergeAllRight([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeAllRight.svg?maxAge=2592000&style=flat-square
 
-## [mergeDeepLeft()](https://github.com/unctionjs/mergeDeepLeft#readme) [3.0.0]/mergeDeepLeft
+## [mergeDeepLeft()](https://github.com/unctionjs/mergeDeepLeft#readme) [3.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -1344,7 +1344,7 @@ mergeDeepLeft(left)(right)
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeDeepLeft.svg?maxAge=2592000&style=flat-square
 
-## [mergeDeepRight()](https://github.com/unctionjs/mergeDeepRight#readme) [2.0.0]/mergeDeepRight
+## [mergeDeepRight()](https://github.com/unctionjs/mergeDeepRight#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1421,7 +1421,7 @@ mergeDeepRight(left)(right)
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeDeepRight.svg?maxAge=2592000&style=flat-square
 
-## [mergeLeft()](https://github.com/unctionjs/mergeLeft#readme) [3.0.0]/mergeLeft
+## [mergeLeft()](https://github.com/unctionjs/mergeLeft#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1462,7 +1462,7 @@ Which returns:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeLeft.svg?maxAge=2592000&style=flat-square
 
-## [mergeRight()](https://github.com/unctionjs/mergeRight#readme) [3.0.0]/mergeRight
+## [mergeRight()](https://github.com/unctionjs/mergeRight#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1503,7 +1503,7 @@ Which returns:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeRight.svg?maxAge=2592000&style=flat-square
 
-## [mergeWith()](https://github.com/unctionjs/mergeWith#readme) [4.0.0]/mergeWith
+## [mergeWith()](https://github.com/unctionjs/mergeWith#readme) [4.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1546,7 +1546,7 @@ Which returns:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeWith.svg?maxAge=2592000&style=flat-square
 
-## [mergeWithKey()](https://github.com/unctionjs/mergeWithKey#readme) [3.0.0]/mergeWithKey
+## [mergeWithKey()](https://github.com/unctionjs/mergeWithKey#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1583,7 +1583,7 @@ Which returns:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mergeWithKey.svg?maxAge=2592000&style=flat-square
 
-## [nestedApply()](https://github.com/unctionjs/nestedApply#readme) [4.0.0]/nestedApply
+## [nestedApply()](https://github.com/unctionjs/nestedApply#readme) [4.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1666,7 +1666,7 @@ And the result:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/nestedApply.svg?maxAge=2592000&style=flat-square
 
-## [optimisticP()](https://github.com/unctionjs/optimisticP#readme) [3.0.0]/optimisticP
+## [optimisticP()](https://github.com/unctionjs/optimisticP#readme) [3.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -1682,7 +1682,7 @@ Will take an array of promises and returns a promise of only the resolved promis
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/optimisticP.svg?maxAge=2592000&style=flat-square
 
-## [pairsKeys()](https://github.com/unctionjs/pairsKeys#readme) [2.0.0]/pairsKeys
+## [pairsKeys()](https://github.com/unctionjs/pairsKeys#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1742,7 +1742,7 @@ You would get the following:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/pairsKeys.svg?maxAge=2592000&style=flat-square
 
-## [pairsValues()](https://github.com/unctionjs/pairsValues#readme) [2.0.0]/pairsValues
+## [pairsValues()](https://github.com/unctionjs/pairsValues#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1802,7 +1802,7 @@ You would get the following:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/pairsValues.svg?maxAge=2592000&style=flat-square
 
-## [partition()](https://github.com/unctionjs/partition#readme) [1.0.0]/partition
+## [partition()](https://github.com/unctionjs/partition#readme) [1.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -1824,7 +1824,7 @@ partition(isOdd)([1,2,3,4]) // [[1,3],[2,4]]
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/partition.svg?maxAge=2592000&style=flat-square
 
-## [pluck()](https://github.com/unctionjs/pluck#readme) [3.0.0]/pluck
+## [pluck()](https://github.com/unctionjs/pluck#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1876,7 +1876,7 @@ Which will return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/pluck.svg?maxAge=2592000&style=flat-square
 
-## [plucks()](https://github.com/unctionjs/plucks#readme) [3.0.0]/plucks
+## [plucks()](https://github.com/unctionjs/plucks#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1933,7 +1933,7 @@ Which will return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/plucks.svg?maxAge=2592000&style=flat-square
 
-## [prepend()](https://github.com/unctionjs/prepend#readme) [2.1.0]/prepend
+## [prepend()](https://github.com/unctionjs/prepend#readme) [2.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -1959,7 +1959,7 @@ NOTE: While there is a type annotation in the README, this function cannot have 
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/prepend.svg?maxAge=2592000&style=flat-square
 
-## [recordFrom()](https://github.com/unctionjs/recordFrom#readme) [2.0.0]/recordFrom
+## [recordFrom()](https://github.com/unctionjs/recordFrom#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -1991,7 +1991,7 @@ Which returns:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/recordFrom.svg?maxAge=2592000&style=flat-square
 
-## [reduceValues()](https://github.com/unctionjs/reduceValues#readme) [2.2.0]/reduceValues
+## [reduceValues()](https://github.com/unctionjs/reduceValues#readme) [2.2.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2023,7 +2023,7 @@ Which will return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/reduceValues.svg?maxAge=2592000&style=flat-square
 
-## [reduceWithValueKey()](https://github.com/unctionjs/reduceWithValueKey#readme) [4.1.0]/reduceWithValueKey
+## [reduceWithValueKey()](https://github.com/unctionjs/reduceWithValueKey#readme) [4.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2055,7 +2055,7 @@ Which will return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/reduceWithValueKey.svg?maxAge=2592000&style=flat-square
 
-## [rejectP()](https://github.com/unctionjs/rejectP#readme) [2.0.0]/rejectP
+## [rejectP()](https://github.com/unctionjs/rejectP#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2076,7 +2076,7 @@ Credit: @keithamus
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/rejectP.svg?maxAge=2592000&style=flat-square
 
-## [replaceWhen()](https://github.com/unctionjs/replaceWhen#readme) [2.0.0]/replacewhen
+## [replaceWhen()](https://github.com/unctionjs/replaceWhen#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2098,7 +2098,7 @@ replaceWhen(isEven)(null)([1, 2, 3]) // [1, null, 3]
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/replaceWhen.svg?maxAge=2592000&style=flat-square
 
-## [resolveP()](https://github.com/unctionjs/resolveP#readme) [2.0.0]/resolveP
+## [resolveP()](https://github.com/unctionjs/resolveP#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2118,7 +2118,7 @@ Credit: @keithamus
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/resolveP.svg?maxAge=2592000&style=flat-square
 
-## [sample()](https://github.com/unctionjs/sample#readme) [2.0.0]/sample
+## [sample()](https://github.com/unctionjs/sample#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2146,7 +2146,7 @@ sample(users()) // => {"id": 1, "name": "Kurtis Rainbolt-Greene"}
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/sample.svg?maxAge=2592000&style=flat-square
 
-## [sampleSize()](https://github.com/unctionjs/sampleSize#readme) [2.0.0]/sampleSize
+## [sampleSize()](https://github.com/unctionjs/sampleSize#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2172,7 +2172,7 @@ sample(2)(users()) // => [{"id": 2, "name": "Angela Englund"}, {"id": 1, "name":
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/sampleSize.svg?maxAge=2592000&style=flat-square
 
-## [shuffle()](https://github.com/unctionjs/shuffle#readme) [2.0.0]/shuffle
+## [shuffle()](https://github.com/unctionjs/shuffle#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2230,7 +2230,7 @@ Would return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/shuffle.svg?maxAge=2592000&style=flat-square
 
-## [splat()](https://github.com/unctionjs/splat#readme) [2.0.0]/splat
+## [splat()](https://github.com/unctionjs/splat#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2252,7 +2252,7 @@ splat((a) => (b) => a + b)([1, 2]) // 3
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/splat.svg?maxAge=2592000&style=flat-square
 
-## [startsWith()](https://github.com/unctionjs/startsWith#readme) [2.0.0]/startsWith
+## [startsWith()](https://github.com/unctionjs/startsWith#readme) [2.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2272,7 +2272,7 @@ startsWith("Hello")("Hello, world!") // true
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/startsWith.svg?maxAge=2592000&style=flat-square
 
-## [thenCatchP()](https://github.com/unctionjs/thenCatchP#readme) [2.0.0]/thenCatchP
+## [thenCatchP()](https://github.com/unctionjs/thenCatchP#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2292,7 +2292,7 @@ Credit: @keithamus
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/thenCatchP.svg?maxAge=2592000&style=flat-square
 
-## [thenP()](https://github.com/unctionjs/thenP#readme) [2.0.0]/thenP
+## [thenP()](https://github.com/unctionjs/thenP#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2312,7 +2312,7 @@ Credit: @keithamus
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/thenP.svg?maxAge=2592000&style=flat-square
 
-## [thrush()](https://github.com/unctionjs/thrush#readme) [2.0.0]/thrush
+## [thrush()](https://github.com/unctionjs/thrush#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2334,7 +2334,7 @@ thrush(0)((value) => `${value}`) // "0"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/thrush.svg?maxAge=2592000&style=flat-square
 
-## [treeify()](https://github.com/unctionjs/treeify#readme) [3.0.0]/treeify
+## [treeify()](https://github.com/unctionjs/treeify#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2458,7 +2458,7 @@ The resulting object looks like this:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/treeify.svg?maxAge=2592000&style=flat-square
 
-## [type()](https://github.com/unctionjs/type#readme) [2.0.0]/type
+## [type()](https://github.com/unctionjs/type#readme) [2.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2484,7 +2484,7 @@ type(undefined) // "undefined"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/type.svg?maxAge=2592000&style=flat-square
 
-## [upTo()](https://github.com/unctionjs/upTo#readme) [3.0.0]/upTo
+## [upTo()](https://github.com/unctionjs/upTo#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2502,7 +2502,7 @@ Just takes a maximum and produces an array of 1 to that number.
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/upTo.svg?maxAge=2592000&style=flat-square
 
-## [withoutKeyRecursive()](https://github.com/unctionjs/withoutKeyRecursive#readme) [3.0.0]/withoutKeyRecursive
+## [withoutKeyRecursive()](https://github.com/unctionjs/withoutKeyRecursive#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2548,7 +2548,7 @@ Which will return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/withoutKeyRecursive.svg?maxAge=2592000&style=flat-square
 
-## [zip()](https://github.com/unctionjs/zip#readme) [3.0.0]/zip
+## [zip()](https://github.com/unctionjs/zip#readme) [3.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2586,7 +2586,7 @@ returns
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/zip.svg?maxAge=2592000&style=flat-square
 
-## [values()](https://github.com/unctionjs/values#readme) [3.0.0]/values
+## [values()](https://github.com/unctionjs/values#readme) [3.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2607,7 +2607,7 @@ values(["aaa", "bbb"]) // ["aaa", "bbb"]
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/values.svg?maxAge=2592000&style=flat-square
 
-## [reduceKeys()](https://github.com/unctionjs/reduceKeys#readme) [2.0.0]/reduceValues
+## [reduceKeys()](https://github.com/unctionjs/reduceKeys#readme) [2.0.0]
 
 
 ![Tests][BADGE_TRAVIS]
@@ -2641,7 +2641,7 @@ Which will return:
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/reduceValues.svg?maxAge=2592000&style=flat-square
 
-## [keys()](https://github.com/unctionjs/keys#readme) [3.0.0]/keys
+## [keys()](https://github.com/unctionjs/keys#readme) [3.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2662,7 +2662,7 @@ keys(["111", "222"]) // [0, 1]
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/keys.svg?maxAge=2592000&style=flat-square
 
-## [pipe()](https://github.com/unctionjs/pipe#readme) [2.0.0]/pipe
+## [pipe()](https://github.com/unctionjs/pipe#readme) [2.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2682,7 +2682,7 @@ pipe([toString, toInteger])(0) // 0
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/pipe.svg?maxAge=2592000&style=flat-square
 
-## [fromArrayToObject()](https://github.com/unctionjs/fromArrayToObject#readme) [2.1.0]/fromArrayToObject
+## [fromArrayToObject()](https://github.com/unctionjs/fromArrayToObject#readme) [2.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2702,7 +2702,7 @@ fromArrayToObject([["aaa", "1"], ["bbb", "2"]]) // {aaa: 1, bbb: 2}
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/fromArrayToObject.svg?maxAge=2592000&style=flat-square
 
-## [split()](https://github.com/unctionjs/split#readme) [1.0.0]/split
+## [split()](https://github.com/unctionjs/split#readme) [1.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2722,7 +2722,7 @@ split(" ")("a b") // ["a", "b"]
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/split.svg?maxAge=2592000&style=flat-square
 
-## [streamSatisfies()](https://github.com/unctionjs/streamSatisfies#readme) [1.0.0]/streamSatisfies
+## [streamSatisfies()](https://github.com/unctionjs/streamSatisfies#readme) [1.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2756,7 +2756,7 @@ test(({equal, end}) => {
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/streamSatisfies.svg?maxAge=2592000&style=flat-square
 
-## [dropLast()](https://github.com/unctionjs/dropLast#readme) [1.3.0]/dropLast
+## [dropLast()](https://github.com/unctionjs/dropLast#readme) [1.3.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2779,7 +2779,7 @@ dropLast(1)("abc") // "ab"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/dropLast.svg?maxAge=2592000&style=flat-square
 
-## [takeLast()](https://github.com/unctionjs/takeLast#readme) [1.1.0]/takeLast
+## [takeLast()](https://github.com/unctionjs/takeLast#readme) [1.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2802,7 +2802,7 @@ takeLast(1)("abc") // "c"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/takeLast.svg?maxAge=2592000&style=flat-square
 
-## [takeFirst()](https://github.com/unctionjs/takeFirst#readme) [1.1.1]/takeFirst
+## [takeFirst()](https://github.com/unctionjs/takeFirst#readme) [1.1.1]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2825,7 +2825,7 @@ takeFirst(1)("abc") // "a"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/takeFirst.svg?maxAge=2592000&style=flat-square
 
-## [dropFirst()](https://github.com/unctionjs/dropFirst#readme) [1.3.0]/dropFirst
+## [dropFirst()](https://github.com/unctionjs/dropFirst#readme) [1.3.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2848,7 +2848,7 @@ dropFirst(1)("abc") // "bc"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/dropFirst.svg?maxAge=2592000&style=flat-square
 
-## [equals()](https://github.com/unctionjs/equals#readme) [1.1.0]/equals
+## [equals()](https://github.com/unctionjs/equals#readme) [1.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2883,7 +2883,7 @@ equals(undefined)(null) // false
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/equals.svg?maxAge=2592000&style=flat-square
 
-## [length()](https://github.com/unctionjs/length#readme) [1.0.0]/length
+## [length()](https://github.com/unctionjs/length#readme) [1.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2906,7 +2906,7 @@ length(new Set([1, 2, 3])) // 3
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/length.svg?maxAge=2592000&style=flat-square
 
-## [fromFunctorToPairs()](https://github.com/unctionjs/fromFunctorToPairs#readme) [1.1.0]/fromFunctorToPairs
+## [fromFunctorToPairs()](https://github.com/unctionjs/fromFunctorToPairs#readme) [1.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2929,7 +2929,7 @@ fromFunctorToPairs(new Set(["a", "b", "c"])) // [[undefined, "a"], [undefined, "
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/fromFunctorToPairs.svg?maxAge=2592000&style=flat-square
 
-## [fromIteratorToArray()](https://github.com/unctionjs/fromIteratorToArray#readme) [1.1.0]/fromIteratorToArray
+## [fromIteratorToArray()](https://github.com/unctionjs/fromIteratorToArray#readme) [1.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2950,7 +2950,7 @@ fromIteratorToArray(new Map([["aaa", "a"], ["bbb", "b"], ["ccc", "c"]]).entries(
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/fromIteratorToArray.svg?maxAge=2592000&style=flat-square
 
-## [last()](https://github.com/unctionjs/last#readme) [1.0.0]/last
+## [last()](https://github.com/unctionjs/last#readme) [1.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2971,7 +2971,7 @@ last("abc") // "c"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/last.svg?maxAge=2592000&style=flat-square
 
-## [remaining()](https://github.com/unctionjs/remaining#readme) [1.0.0]/remaining
+## [remaining()](https://github.com/unctionjs/remaining#readme) [1.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -2992,7 +2992,7 @@ remaining("abc") // "bc"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/remaining.svg?maxAge=2592000&style=flat-square
 
-## [first()](https://github.com/unctionjs/first#readme) [1.1.0]/first
+## [first()](https://github.com/unctionjs/first#readme) [1.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -3013,7 +3013,7 @@ first("abc") // "a"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/first.svg?maxAge=2592000&style=flat-square
 
-## [reverse()](https://github.com/unctionjs/reverse#readme) [1.0.0]/reverse
+## [reverse()](https://github.com/unctionjs/reverse#readme) [1.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -3034,7 +3034,7 @@ reverse("abc") // "cba"
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/reverse.svg?maxAge=2592000&style=flat-square
 
-## [greaterThan()](https://github.com/unctionjs/greaterThan#readme) [1.1.0]/greaterThan
+## [greaterThan()](https://github.com/unctionjs/greaterThan#readme) [1.1.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
@@ -3055,7 +3055,7 @@ greaterThan(0)(1) // false
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/greaterThan.svg?maxAge=2592000&style=flat-square
 
-## [lessThan()](https://github.com/unctionjs/lessThan#readme) [1.0.0]/lessThan
+## [lessThan()](https://github.com/unctionjs/lessThan#readme) [1.0.0]
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
