@@ -11,6 +11,8 @@
 
 # Temporary files
 /tmp/
+/coverage/
+/.nyc_output/
 
 # Log files
 *.log
@@ -18,6 +20,3 @@
 
 # Sensitive files
 /.env
-
-/.nyc_output/
-/coverage/
