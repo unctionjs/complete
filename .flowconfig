@@ -10,7 +10,8 @@
 
 [libs]
 flow-typed/
-types/
+types/flow-typed/
+types/*Types.js
 
 [options]
 all=true
