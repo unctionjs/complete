@@ -24,7 +24,7 @@
     "build": "babel './index.js' -d './transpiled/'",
     "lint": "eslint './index.js'",
     "check": "flow-typed install && flow check",
-    "ci": "npm run test && npm run lint && npm run check",
+    "ci": "npm run test",
     "watch": "chokidar './index.js' './test.js' --command 'npm run ci --silent'"
   },
   "devDependencies": {
