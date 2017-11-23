@@ -122,7 +122,7 @@
     "@unction/recordfrom": "2.39.0",
     "@unction/reducekeys": "2.37.0",
     "@unction/reducevalues": "2.39.0",
-    "@unction/reducewithvaluekey": "4.37.0",
+    "@unction/reducewithvaluekey": "4.39.0",
     "@unction/rejectp": "2.8.0",
     "@unction/remaining": "1.39.0",
     "@unction/replacewhen": "2.41.0",
