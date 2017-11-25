@@ -50,13 +50,13 @@
     "tap": "10.3.4"
   },
   "dependencies": {
-    "@unction/allobjectp": "3.51.0",
+    "@unction/allobjectp": "3.52.0",
     "@unction/allp": "2.8.0",
     "@unction/always": "2.8.0",
     "@unction/append": "2.13.0",
     "@unction/appendm": "2.8.0",
     "@unction/applicator": "2.8.0",
-    "@unction/applicators": "2.52.0",
+    "@unction/applicators": "2.53.0",
     "@unction/arrayify": "2.19.0",
     "@unction/aside": "3.46.0",
     "@unction/attach": "3.14.1",
