@@ -10,8 +10,7 @@
 
 [libs]
 flow-typed/
-types/flow-typed/
-types/*Types.js
 
 [options]
 all=true
+module.name_mapper='^types$' ->'<PROJECT_ROOT>/types'
