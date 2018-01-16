@@ -4,47 +4,101 @@
 ![Stability](https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square)
 ![Dependencies](https://img.shields.io/david/unctionjs/complete.svg?maxAge=2592000&style=flat-square)
 
-The package containing all 108 individual @unctionjs packages as a single package.
+The package containing all 108 individual @unctionjs packages as a single package. All functions are bound by three principles that are detailed below.
 
+## Using
 
-**Using**
+You can either install the complete package:
 
-All functions are bound by these principles:
+``` bash
+npm install --save @unction/complete
+```
 
-  - All functions will have a description and an example.
-  - All functions will have a test for each type they support.
-  - All functions will have type annotations.
-  - All functions will only take a single argument.
-  - All inner functions will be named based on the outer function and it's argument name, to improve debugging readability.
-  - Functions that deal with types have a common standard format (see: `type()`)
-  - Functions that mutate the original value, though rare, will have a suffix of M.
-  - Functions that take or return promises will have a suffix of P.
-  - Functions that can work on one type of Functor (value that can be mapped) can work on another type, including:
-    - List (Array, Set)
-    - Record (Object, Map)
-    - Text (String, Buffer)
-    - Stream (Stream, MemoryStream)
-
-
-You can use each of these packages individually:
+and import the function from package:
 
 ``` javascript
-import {hammer} from "@unction/complete"
+import {treeify} from "@unction/complete"
+```
+
+Or you can install the package individually:
+
+```
+npm install --save @unction/treeify
+```
+
+And import it individually:
+
+``` javascript
+import treeify from "@unction/treeify"
 ```
 
 
-**Raison d'exister**
+## Principle 1: All functions are curried
 
-There are a few similar libraries out there and they all have good standing with the community, so why make @unctionjs? Well the original package started off as ramda-extra, a set of functions in a package that ramda seemed to never want to implement (like at the time mapKeys). Then eventually I got to the point where I wanted to have functions be curried for clarity and found that many ramda functions don't fully support only currying. While ramda is amazing and I still use it to this day I knew I had to fork off and write my own path.
+Due to the nature of functional programming it's exceedingly valuable to have functions that are, by default, curried. Here's an erxample:
 
-Here's a list of (I believe) fair reasons why you should use unction over these popular and really good libraries:
 
-  - *ramda*: Ramda has all functions in a single package, it relies on internal private functions to ensure compatibility, does not have real type checking, prefers "autocurrying" which can lead to issues with curried functions, and finally as described above ramda has an interest in retaining a small surface layer
-  - *lodash*: Lodash only does curried as a second class citizen, doesn't have type checking, prefers autocurrying when it has support for it, and doesn't have a very clear picture about what some of the functions should work on
+``` javascript
+import treeify from "@unction/treeify"
+import key from "@unction/key"
+import keyChain from "@unction/keychain"
+import indexBy from "@unction/indexby"
+import groupBy from "@unction/groupby"
 
-## Documentation
+export default treeify(
+  [
+    groupBy(key("type")),
+    groupBy(keyChain(["attributes", "namespace"])),
+    groupBy(keyChain(["attributes", "version"])),
+    indexBy(key("id")),
+  ]
+)
+```
 
-This is the documentation for using each function.
+We can use this function like so:
+
+``` javascript
+import stateTree from "./stateTree"
+
+stateTree(data)
+```
+
+
+## Principle 2: All functions know how to deal with a finite set of primitives
+
+When using a unctionjs function you can be sure that we'll be able to handle all 6 enumerable types:
+
+  - Array
+  - Object
+  - Set
+  - Map
+  - String
+  - Stream (see: most.js)
+
+
+## Principle 3: All functions are pure by default
+
+No function will ever have any side-effects (unless otherwise noted with a `I` suffix like `shuffleI()`) and are referentially transparent.
+
+
+## Principle 4: All functions are immutable by default
+
+These functions do not mutate (unless otherwise noted with a `M` suffix like `appendM()`) the original values.
+
+
+## Raison d'exister
+
+There are a few similar libraries out there and they all have good standing with the community, so why make unctionjs? Well the original package started off as ramda-extra, a set of functions in a package that ramda seemed to never want to implement (like at the time mapKeys). Then eventually I got to the point where I wanted to have functions be curried for clarity and found that many ramda functions don't fully support only currying. While ramda is amazing and I still use it to this day I knew I had to fork off and write my own path.
+
+Here's a list of (I believe) fair reasons why I don't use these popular and *really good libraries*:
+
+  - *ramda*: Ramda has all functions in a single package, it relies on internal private functions to ensure compatibility, does not have real type checking, prefers "autocurrying" which can lead to issues with curried functions, and finally as described above ramda has an interest in retaining a small surface layer.
+  - *lodash*: Lodash only does curried as a second class citizen, doesn't have type checking, prefers "autocurrying" when it has support for it, and doesn't have a very clear picture about what some of the functions are polymorphic.
+
+That said every unctionjs function will work with every ramda and lodash function where currying is allowed.
+
+
+## Functions
 
 
 ### [allObjectP](https://github.com/unctionjs/allObjectP#readme)()
