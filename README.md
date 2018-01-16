@@ -158,7 +158,7 @@ If we use `allP` or `Promise.all` we're getting an array back, but that's annoyi
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<any | Promise<any>> -> Promise<Array<any>>
+Array<any | Promise<any>> => Promise<Array<any>>
 ```
 
 A port of the `Promise.all()` function.
@@ -178,7 +178,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-any -> any -> any
+any => any => any
 ```
 
 Always returns the value given when called
@@ -200,7 +200,7 @@ always(1)(0) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> (ArrayType | string) -> (ArrayType | string)
+mixed => (ArrayType | string) => (ArrayType | string)
 ```
 
 Takes a value and puts it at the end of the given list.
@@ -227,7 +227,7 @@ NOTE: While there is a type annotation in the README, this function cannot have 
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-any -> Array<any> -> Array<any>
+any => Array<any> => Array<any>
 ```
 
 Takes an array and an item and returns the combination of both, appended.
@@ -259,7 +259,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(ValueType -> any) -> any
+(ValueType => any) => any
 ```
 
 Takes a function and a value and applies that function to that value.
@@ -280,7 +280,7 @@ applicator(inc)(1) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(Array<mixed -> mixed> | RecordType<KeyType, mixed -> mixed>)<T> -> (ArrayType | RecordType)<T> -> (ArrayType | RecordType)<T>
+(Array<mixed => mixed> | RecordType<KeyType, mixed => mixed>)<T> => (ArrayType | RecordType)<T> => (ArrayType | RecordType)<T>
 ```
 
 Takes a list of functions and a list of values and applies the values to the functions.
@@ -338,7 +338,7 @@ returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-any -> [any] | Array<any>
+any => [any] | Array<any>
 ```
 
 Takes a value and turns it into an array of that value, unless the value is already an array.
@@ -375,7 +375,7 @@ returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<mixed => mixed> -> mixed -> mixed
+Array<mixed => mixed> => mixed => mixed
 ```
 
 Takes a stack of functions, like `pipe()`, but always returns the second argument.
@@ -430,7 +430,7 @@ attach(1)("x")([1, 2, 3]) // => [1, "x", 2, 3]
 attach(null)("x")(new Set([1, 2, 3])) // => {1 2 3 "x"}
 attach(10)("x")([]) // => ["x"]
 attach(0)("a")("bc") // => "abc"
-attach(null)("a")(xstream.of("b")) // => a---b--->
+attach(null)("a")(xstream.of("b")) // => a---b--=>
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/attach.svg?maxAge=2592000&style=flat-square
@@ -445,7 +445,7 @@ attach(null)("a")(xstream.of("b")) // => a---b--->
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<UnfinishedKeyChainType> -> FunctorType -> ValueType
+Array<UnfinishedKeyChainType> => FunctorType => ValueType
 ```
 
 Cascades through multiple keychains in order to arrive at a value. Null keys are replaced with the previous keychain's value.
@@ -497,7 +497,7 @@ returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(any -> any) -> Promise<any> -> Promise<any>
+(any => any) => Promise<any> => Promise<any>
 ```
 
 A port of the `Promise.prototype.catch()` function.
@@ -517,7 +517,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<any> -> Array<mixed>
+Array<any> => Array<mixed>
 ```
 
 Takes a collection (Array or Object) and returns a copy of that value without `null` or `undefined` values.
@@ -544,7 +544,7 @@ compact(head(users)) // {"name": "Kurtis Rainbolt-Greene"}
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(FunctorType -> mixed) -> KeyChainType -> FunctorType -> FunctorType
+(FunctorType => mixed) => KeyChainType => FunctorType => FunctorType
 ```
 
 Given an object this function will return that object but with a new property, where the value is computed. The computation is given the object you'll be copying.
@@ -605,7 +605,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> mixed -> [mixed, mixed]
+mixed => mixed => [mixed, mixed]
 ```
 
 Takes any value and then any value and returns an array containing those values.
@@ -627,7 +627,7 @@ couple(4)(5) // => [4, 5]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-DOMEventsConfigurationType -> DOMEventNameType -> DOMStreamType -> DOMEventStreamType
+DOMEventsConfigurationType => DOMEventNameType => DOMStreamType => DOMEventStreamType
 ```
 
 Takes a configuration, an event name, and a DOM source and returns an observable of that event type
@@ -639,7 +639,7 @@ domEvents({})("click")(DOM)
 returns
 
 ``` javascript
---click--click--click-->
+--click--click--click-=>
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/domEvents.svg?maxAge=2592000&style=flat-square
@@ -680,7 +680,7 @@ returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-string -> string -> boolean
+string => string => boolean
 ```
 
 Determines if a given subset of text is at the end of another set of text.
@@ -701,7 +701,7 @@ endsWith("!")("Hello, world!") // true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(Array<any | Promise<any>>) -> Promise<[ResolvedPromisesType, RejectedPromisesType]>
+(Array<any | Promise<any>>) => Promise<[ResolvedPromisesType, RejectedPromisesType]>
 ```
 
 Returns both resolved and rejected promises as distinct lists.
@@ -718,7 +718,7 @@ Returns both resolved and rejected promises as distinct lists.
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-StringType -> RecordTreeType -> RecordType
+StringType => RecordTreeType => RecordType
 ```
 
 Takes a tree and creates a single object where the root keys are conjoined nested keys.
@@ -765,7 +765,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(any -> any) -> any -> any -> any
+(any => any) => any => any => any
 ```
 
 Flips a function's first and second arguments.
@@ -787,7 +787,7 @@ flip(key)({aaa: "1"})("aaa") // "1"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(any -> KeyType -> any) -> FunctorType -> FunctorType
+(any => KeyType => any) => FunctorType => FunctorType
 ```
 
 Takes any kind of iterable object and figures out the best way to iterate over it.
@@ -810,7 +810,7 @@ forEach((x) => y)({})
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> mixed
+mixed => mixed
 ```
 
 Takes a value and returns an empty fresh version of that value.
@@ -834,7 +834,7 @@ fresh([]) // []
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyType -> RecordType -> RecordType
+KeyType => RecordType => RecordType
 ```
 
 Use this to de-nest a nested object.
@@ -895,7 +895,7 @@ ifThenElse(isEven)(toString)(toFloat)(2) // "2"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> boolean
+mixed => boolean
 ```
 
 Takes any value and then any value and returns an array containing those values.
@@ -919,7 +919,7 @@ isArray("") // => false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> boolean
+mixed => boolean
 ```
 
 Determines if a value is not a value.
@@ -946,7 +946,7 @@ isNil({}) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> boolean
+mixed => boolean
 ```
 
 Takes a value and determines if it's an object.
@@ -970,7 +970,7 @@ isObject("") // => false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-FunctorType -> boolean
+FunctorType => boolean
 ```
 
 Allows you to check if a iterable has any items.
@@ -997,7 +997,7 @@ isPopulated("a") // true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> boolean
+mixed => boolean
 ```
 
 This lets you know if it's a non-null, non-undefined value.
@@ -1021,7 +1021,7 @@ isPresent(undefined) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-string -> mixed -> boolean
+string => mixed => boolean
 ```
 
 Takes any value and then any value and returns an array containing those values.
@@ -1045,7 +1045,7 @@ isType("String")("") // => true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-any -> any
+any => any
 ```
 
 Always returns the value given when calling.
@@ -1068,7 +1068,7 @@ itself(1) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyType -> mixed -> ValueType
+KeyType => mixed => ValueType
 ```
 
 Returns the value of a specific key on an iterable. If no key is found it returns undefined. If the second argument isn't an iterable we return undefined, to allow for graceful failure.
@@ -1093,7 +1093,7 @@ key(0)(["aaa"]) // "aaa"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyChainType -> TreeType -> ValueType
+KeyChainType => TreeType => ValueType
 ```
 
 Takes a chain of keys and a tree, traversing down and reaching the last value. If any part of the chain is undefined or not an object the result will always be undefined.
@@ -1138,7 +1138,7 @@ lacksBestFood(data) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType -> KeyedFunctorType -> KeyedFunctorType
+MapperFunctionType => KeyedFunctorType => KeyedFunctorType
 ```
 
 Map over a keyed functor's keys and return a new keyed functor having mapped the keys
@@ -1172,7 +1172,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(ValueType -> KeyType -> KeyType) -> FunctorType -> FunctorType
+(ValueType => KeyType => KeyType) => FunctorType => FunctorType
 ```
 
 Map over keys with the context of the value and key.
@@ -1207,7 +1207,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(any -> any) -> FunctorType -> FunctorType
+(any => any) => FunctorType => FunctorType
 ```
 
 A pretty standard `mapValues()`, but with enforced unary currying.
@@ -1266,7 +1266,7 @@ Just like map, but gives back the index argument (as an integer, not a string if
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<FunctorType> -> FunctorType
+Array<FunctorType> => FunctorType
 ```
 
 Merges a list of iterables (of the same type) into a single iterable.
@@ -1287,7 +1287,7 @@ mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "b
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<FunctorType> -> FunctorType
+Array<FunctorType> => FunctorType
 ```
 
 Merges a list of iterables (of the same type) into a single iterable.
@@ -1384,7 +1384,7 @@ mergeDeepLeft(left)(right)
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-FunctorType -> FunctorType -> FunctorType
+FunctorType => FunctorType => FunctorType
 ```
 
 Recursively merges two objects/arrays. Merges objects with `merge` and arras with concat. Prefers right. THAT IS ALL.
@@ -1461,7 +1461,7 @@ mergeDeepRight(left)(right)
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-FunctorType -> FunctorType -> FunctorType
+FunctorType => FunctorType => FunctorType
 ```
 
 Merges two iterables, preferring left.
@@ -1502,7 +1502,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-FunctorType -> FunctorType -> FunctorType
+FunctorType => FunctorType => FunctorType
 ```
 
 Merges two iterables, preferring right.
@@ -1543,7 +1543,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(ValueType -> ValueType -> ValueType) -> FunctorType -> FunctorType -> FunctorType
+(ValueType => ValueType => ValueType) => FunctorType => FunctorType => FunctorType
 ```
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the the left value and the right value.
@@ -1586,7 +1586,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(FunctorType -> FunctorType -> KeyType -> any) -> FunctorType -> FunctorType -> FunctorType
+(FunctorType => FunctorType => KeyType => any) => FunctorType => FunctorType => FunctorType
 ```
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the key, the left value, and the right value.
@@ -1703,7 +1703,7 @@ And the result:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<mixed | Promise<mixed>> -> Promise<Array<mixed>>
+Array<mixed | Promise<mixed>> => Promise<Array<mixed>>
 ```
 
 Will take an array of promises and returns a promise of only the resolved promises.
@@ -1720,7 +1720,7 @@ Will take an array of promises and returns a promise of only the resolved promis
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<[string, any]> -> Array<string>
+Array<[string, any]> => Array<string>
 ```
 
 Takes an array that looks like a list of pairs (key, values) and returns all the keys.
@@ -1780,7 +1780,7 @@ You would get the following:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<[KeyType, any]> -> Array<any>
+Array<[KeyType, any]> => Array<any>
 ```
 
 Takes an array that looks like a list of pairs (key, values) and returns all the values.
@@ -1860,7 +1860,7 @@ partition(isOdd)([1,2,3,4]) // [[1,3],[2,4]]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyChainType -> FunctorType -> Array<any>
+KeyChainType => FunctorType => Array<any>
 ```
 
 Given a keychain and records return the values at the keychain for each record.
@@ -1912,7 +1912,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<KeyChainType> -> FunctorType -> Array<any>
+Array<KeyChainType> => FunctorType => Array<any>
 ```
 
 Given keychain and records, return the values at the keychain for each record.
@@ -1968,7 +1968,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> (ArrayType | string) -> (ArrayType | string)
+mixed => (ArrayType | string) => (ArrayType | string)
 ```
 
 Takes a value and puts it at the beginning of the given list.
@@ -1994,7 +1994,7 @@ NOTE: While there is a type annotation in the README, this function cannot have 
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyChainType -> KeyChainType -> KeyedFunctorType -> RecordType
+KeyChainType => KeyChainType => KeyedFunctorType => RecordType
 ```
 
 Takes a keyed functor that looks like an entity (keys are pointers to both keys and values) and turns them into an non-entity record.
@@ -2032,7 +2032,7 @@ which returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyChain -> any -> FunctorType
+KeyChain => any => FunctorType
 ```
 
 Given a keychain and a value it creates an object that has keys based on the keychain.
@@ -2063,7 +2063,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(AccumulatedType -> ValueType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
+(AccumulatedType => ValueType => AccumulatedType) => InitialType => FunctorType => AccumulatedType
 ```
 
 Reduce over a iterable's values.
@@ -2128,7 +2128,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-any -> Promise<any>
+any => Promise<any>
 ```
 
 A port of the `Promise.reject()` function.
@@ -2169,7 +2169,7 @@ replaceWhen(isEven)(null)([1, 2, 3]) // [1, null, 3]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-any -> Promise<any>
+any => Promise<any>
 ```
 
 A port of the `Promise.resolve()` function.
@@ -2189,7 +2189,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(string | Array<any>) -> (string | any)
+(string | Array<any>) => (string | any)
 ```
 
 Takes an Array or string and randomly one element to return.
@@ -2217,7 +2217,7 @@ sample(users()) // => {"id": 1, "name": "Kurtis Rainbolt-Greene"}
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-number -> (string | Array<any>) -> (string | any)
+number => (string | Array<any>) => (string | any)
 ```
 
 Takes an Array or string and randomly picks *n* elements to return, but never the same one.
@@ -2299,7 +2299,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(ValueType -> any) -> Array<ValueType> -> any
+(ValueType => any) => Array<ValueType> => any
 ```
 
 Takes a function and a list of values and recursively applies the value to the functions.
@@ -2320,7 +2320,7 @@ splat((a) => (b) => a + b)([1, 2]) // 3
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-string -> string -> boolean
+string => string => boolean
 ```
 
 Determines if a given subset of text is at the start of another set of text.
@@ -2341,7 +2341,7 @@ startsWith("Hello")("Hello, world!") // true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(any -> any) -> (any -> any) -> Promise<any> ->  Promise<any>
+(any => any) => (any => any) => Promise<any> =>  Promise<any>
 ```
 
 A port of the `Promise.prototype.then()` function, but with the extra catch argument.
@@ -2361,7 +2361,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(any -> any) -> Promise<any> -> Promise<any>
+(any => any) => Promise<any> => Promise<any>
 ```
 
 A port of the `Promise.prototype.then()` function.
@@ -2381,7 +2381,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-any -> (any -> any) -> any
+any => (any => any) => any
 ```
 
 One of the fantasy birds: it takes a value, a function, and then applies that value to as the first argument to that function.
@@ -2403,7 +2403,7 @@ thrush(0)((value) => `${value}`) // "0"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<(any -> FunctorType -> FunctorType)> -> Array<FunctorType> -> FunctorType
+Array<(any => FunctorType => FunctorType)> => Array<FunctorType> => FunctorType
 ```
 
 This takes a list of functions (the folders) and an array of objects or an
@@ -2526,7 +2526,7 @@ The resulting object looks like this:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-null | void | {constructor: {name: string}} -> string
+null | void | {constructor: {name: string}} => string
 ```
 
 Returns the type name of the value provided.
@@ -2553,7 +2553,7 @@ type(undefined) // "undefined"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-number -> Array<number>
+number => Array<number>
 ```
 
 Just takes a maximum and produces an array of 1 to that number.
@@ -2571,7 +2571,7 @@ Just takes a maximum and produces an array of 1 to that number.
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyType -> FunctorType -> FunctorType
+KeyType => FunctorType => FunctorType
 ```
 
 Returns a copy of an iterable without a key, no matter how deep the tree.
@@ -2617,7 +2617,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(ArrayType | ObjectType) -> ArrayType | ObjectType -> ArrayType | ObjectType
+(ArrayType | ObjectType) => ArrayType | ObjectType => ArrayType | ObjectType
 ```
 
 Takes two iterables and merges them together, combining their values into an array
@@ -2654,7 +2654,7 @@ returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-FunctorType -> Array<ValueType>
+FunctorType => Array<ValueType>
 ```
 
 Takes an iterable and returns it's values.
@@ -2676,7 +2676,7 @@ values(["aaa", "bbb"]) // ["aaa", "bbb"]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(AccumulatedType -> KeyType -> AccumulatedType) -> InitialType -> FunctorType -> AccumulatedType
+(AccumulatedType => KeyType => AccumulatedType) => InitialType => FunctorType => AccumulatedType
 ```
 
 Reduce over a iterable's keys.
@@ -2709,7 +2709,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyedFunctorType -> Array<KeyType>
+KeyedFunctorType => Array<KeyType>
 ```
 
 Takes a keyed iterable and returns the keys as an Array.
@@ -2730,7 +2730,7 @@ keys(["111", "222"]) // [0, 1]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<mixed -> mixed> -> mixed -> mixed
+Array<mixed => mixed> => mixed => mixed
 ```
 
 Takes a list of functions and runs a value through that stack from left to right.
@@ -2866,7 +2866,7 @@ test("String diagram", ({equal, doesNotThrow, end}) => {
   const right = xstream.of("b")
 
   streamSatisfies(
-    "'b'---'a'--->"
+    "'b'---'a'--=>"
   )(
     (given) => (expected) => equal(given, expected)
   )(
@@ -3114,7 +3114,7 @@ equals(undefined)(null) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-FunctorType -> number
+FunctorType => number
 ```
 
 Returns the number of values contained in the iterable.
@@ -3160,7 +3160,7 @@ fromFunctorToPairs(new Set(["a", "b", "c"])) // [[undefined, "a"], [undefined, "
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-IteratorType -> Array<mixed>
+IteratorType => Array<mixed>
 ```
 
 Takes an Iterator (SetIterator, MapIterator, etc) and turns it into an array.
@@ -3181,7 +3181,7 @@ fromIteratorToArray(new Map([["aaa", "a"], ["bbb", "b"], ["ccc", "c"]]).entries(
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(ArrayType | string) -> mixed
+(ArrayType | string) => mixed
 ```
 
 Returns the last item of an ordered list.
@@ -3223,7 +3223,7 @@ remaining("abc") // "bc"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(ArrayType | string) -> mixed
+(ArrayType | string) => mixed
 ```
 
 Returns the first item of an ordered list.
@@ -3244,7 +3244,7 @@ first("abc") // "a"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(ArrayType | string) -> (ArrayType | string)
+(ArrayType | string) => (ArrayType | string)
 ```
 
 Takes an ordered list type and returns the reverse version of it.
@@ -3403,7 +3403,7 @@ selectValues(isOdd)([1, 2, 3, 4]) // [1, 3]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-StringType -> RecordType -> NestedRecordType
+StringType => RecordType => NestedRecordType
 ```
 
 Takes a flat record with a specific key pattern and turns it into a nested record.
@@ -3447,7 +3447,7 @@ which returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed -> StringType
+mixed => StringType
 ```
 
 Return the super type of an value.
@@ -3470,7 +3470,7 @@ supertype(new B()) // "A"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(KeyType | void) -> ValueType -> FunctorType
+(KeyType | void) => ValueType => FunctorType
 ```
 
 Creates a functor based on a value and optional key.
@@ -3491,7 +3491,7 @@ of(null)("bbb")([]) // ["bbb"]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyedFunctorType<PredicateType> -> KeyedFunctorType -> boolean
+KeyedFunctorType<PredicateType> => KeyedFunctorType => boolean
 ```
 
 Compares a Keyed Functor of Predicate Functions to a Functor of values. It is partial and prefers truthiness (meaning it only checks a key on the Functor if there is a key on the matcher).
@@ -3565,7 +3565,7 @@ where(
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(RecordType -> KeyType) -> ListType<RecordType> -> RecordType<RecordType>
+(RecordType => KeyType) => ListType<RecordType> => RecordType<RecordType>
 ```
 
 Creates a record tree where the key is a computation on the value and the value is the original value.
@@ -3643,7 +3643,7 @@ new Map([
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(RecordType -> KeyType) -> ListType<RecordType> -> RecordType<ListType<RecordType>>
+(RecordType => KeyType) => ListType<RecordType> => RecordType<ListType<RecordType>>
 ```
 
 Creates a record tree where the key is a computation on the value and the value is a list of the values that match with that computation.
