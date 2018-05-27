@@ -20,7 +20,7 @@
   "main": "transpiled/index.js",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "test": "NODE_ENV=test tap --100 './test.js'",
+    "test": "NODE_ENV=test jest --coverage './test.js'",
     "build": "babel './index.js' -d './transpiled/'",
     "lint": "eslint './index.js'",
     "check": "flow-typed install && flow check",
@@ -31,7 +31,7 @@
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.3",
-    "babel-plugin-istanbul": "4.1.5",
+    "babel-jest": "23.0.0",
     "babel-plugin-module-resolver": "3.0.0",
     "babel-plugin-pipe-operator-curry": "1.0.2",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
@@ -48,8 +48,7 @@
     "flow": "0.2.3",
     "flow-bin": "0.61.0",
     "flow-typed": "2.2.3",
-    "nyc": "11.3.0",
-    "tap": "11.0.0"
+    "jest": "23.0.0"
   },
   "dependencies": {
     "@unction/allobjectp": "12.0.0",

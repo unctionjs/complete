@@ -2,7 +2,6 @@
 .*/node_modules/.*
 .*/transpiled/.*
 .*/coverage/.*
-.*/.nyc_output/.*
 .*/test.js
 
 [include]

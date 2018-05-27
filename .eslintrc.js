@@ -36,7 +36,7 @@ module.exports = {
     "flowtype/require-parameter-type": "error",
     "flowtype/require-return-type": "error",
     "flowtype/require-valid-file-annotation": "error",
-    "flowtype/require-variable-type": "error",
+    "flowtype/require-variable-type": "off", // Way too much work
     "flowtype/semi": "error",
     "flowtype/sort-keys": "off", // Way too much work
     "flowtype/space-after-type-colon": "error",
