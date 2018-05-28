@@ -1,6 +1,3 @@
-import {test} from "tap"
-
-test(({ok, end}) => {
-  ok(true)
-  end()
+test("complete works", () => {
+  expect(true).toBe(true)
 })
