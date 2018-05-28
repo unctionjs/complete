@@ -51,7 +51,6 @@
     "jest": "23.0.0"
   },
   "dependencies": {
-    "@unction/complete": "17.0.0",
     "@unction/allobjectp": "12.0.0",
     "@unction/allp": "3.0.0",
     "@unction/always": "3.0.0",
@@ -155,7 +154,6 @@
     "@unction/groupby": "9.0.0",
     "@unction/flatten": "9.0.0",
     "@unction/isenumerable": "3.0.0",
-    "@unction/domelements": "1.0.0",
     "@unction/keychaintree": "1.0.1",
     "@unction/dig": "1.0.1",
     "@unction/getmany": "1.0.0",
