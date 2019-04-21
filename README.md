@@ -469,6 +469,26 @@ compact(head(users)) // {"name": "Kurtis Rainbolt-Greene"}
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/compact.svg?maxAge=2592000&style=flat-square
 
+### [compose](https://github.com/unctionjs/compose#readme)()
+
+![Tests][BADGE_TRAVIS]
+![Stability][BADGE_STABILITY]
+![Dependencies][BADGE_DEPENDENCY]
+
+```
+Array<mixed => mixed> => mixed => mixed
+```
+
+Takes a list of functions and runs a value through that stack from right to left.
+
+``` javascript
+pipe([toInteger, toString])(0) // 0
+```
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/compose.svg?maxAge=2592000&style=flat-square
+[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/compose.svg?maxAge=2592000&style=flat-square
+
 ### [computedProp](https://github.com/unctionjs/computedProp#readme)()
 
 
@@ -1001,14 +1021,14 @@ get(0)(["aaa"]) // "aaa"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyedEnumerable => Array<Key>
+Array<Key> => KeyedEnumerable => Array<Value>
 ```
 
-Takes a keyed enumerable and returns the keys as an Array.
+Takes a list of keys and a keyed enumerable, and returns the values for those keys. If no key exists, the value is undefined.
 
 ``` javascript
-getMany({aaa: "111", bbb: "222"}) // ["aaa", "bbb"]
-getMany(["111", "222"]) // [0, 1]
+getMany(["aaa", "bbb"])({aaa: "111", bbb: "222"}) // ["111", "222"]
+getMany(["aaa", "ccc"])({aaa: "111", bbb: "222"}) // ["111", undefined]
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/getMany.svg?maxAge=2592000&style=flat-square

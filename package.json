@@ -48,7 +48,7 @@
     "eslint-plugin-promise": "4.1.1",
     "jest": "23.0.0",
     "nyc": "13.3.0",
-    "tap": "12.6.1"
+    "tap": "12.6.2"
   },
   "dependencies": {
     "@unction/allobjectp": "12.0.0",
@@ -63,6 +63,7 @@
     "@unction/attach": "6.0.0",
     "@unction/catchp": "3.0.0",
     "@unction/compact": "3.0.0",
+    "@unction/compose": "1.0.0",
     "@unction/computedprop": "12.0.0",
     "@unction/couple": "3.0.0",
     "@unction/dig": "1.0.1",
@@ -83,7 +84,7 @@
     "@unction/fromfunctortopairs": "4.0.0",
     "@unction/fromiteratortoarray": "2.0.0",
     "@unction/get": "1.0.0",
-    "@unction/getmany": "1.0.0",
+    "@unction/getmany": "2.0.0",
     "@unction/greaterthan": "2.0.0",
     "@unction/groupby": "9.0.0",
     "@unction/hammer": "15.0.1",

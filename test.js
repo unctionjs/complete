@@ -11,6 +11,7 @@ import {aside} from "./";
 import {attach} from "./";
 import {catchP} from "./";
 import {compact} from "./";
+import {compose} from "./";
 import {computedProp} from "./";
 import {couple} from "./";
 import {dig} from "./";
@@ -166,6 +167,11 @@ test("catchP is a function", ({type: assertType, end}) => {
 
 test("compact is a function", ({type: assertType, end}) => {
   assertType(compact, Function);
+  end();
+});
+
+test("compose is a function", ({type: assertType, end}) => {
+  assertType(compose, Function);
   end();
 });
 
