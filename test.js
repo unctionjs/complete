@@ -22,6 +22,7 @@ import {dropLast} from "./";
 import {endsWith} from "./";
 import {equals} from "./";
 import {everyP} from "./";
+import {exceptKey} from "./";
 import {first} from "./";
 import {flatten} from "./";
 import {flattenTree} from "./";
@@ -48,6 +49,7 @@ import {isPopulated} from "./";
 import {isPresent} from "./";
 import {isType} from "./";
 import {itself} from "./";
+import {keys} from "./";
 import {keyChainTree} from "./";
 import {lacksText} from "./";
 import {last} from "./";
@@ -225,6 +227,11 @@ test("everyP is a function", ({type: assertType, end}) => {
   end();
 });
 
+test("exceptKey is a function", ({type: assertType, end}) => {
+  assertType(exceptKey, Function);
+  end();
+});
+
 test("first is a function", ({type: assertType, end}) => {
   assertType(first, Function);
   end();
@@ -352,6 +359,11 @@ test("isType is a function", ({type: assertType, end}) => {
 
 test("itself is a function", ({type: assertType, end}) => {
   assertType(itself, Function);
+  end();
+});
+
+test("keys is a function", ({type: assertType, end}) => {
+  assertType(keys, Function);
   end();
 });
 

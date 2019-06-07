@@ -482,7 +482,8 @@ Array<mixed => mixed> => mixed => mixed
 Takes a list of functions and runs a value through that stack from right to left.
 
 ``` javascript
-pipe([toInteger, toString])(0) // 0
+compose([toInteger, toString])(0) // 0
+compose([append("b"), append("a")])("c") // "cab"
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/compose.svg?maxAge=2592000&style=flat-square
@@ -763,6 +764,29 @@ Returns both resolved and rejected promises as distinct lists.
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/everyP.svg?maxAge=2592000&style=flat-square
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/everyP.svg?maxAge=2592000&style=flat-square
+
+### [exceptKey](https://github.com/unctionjs/exceptKey#readme)()
+
+![Tests][BADGE_TRAVIS]
+![Stability][BADGE_STABILITY]
+![Dependencies][BADGE_DEPENDENCY]
+
+```
+Key => KeyedFunctor => KeyedFunctor
+```
+
+Takes a key and a keyed functor, returning the keyed functor without the key given.
+
+``` javascript
+exceptKey(1)([1, 2, 3]) // [1, 3]
+exceptKey(1)("abc") // "ac"
+exceptKey("aaa")({aaa: "aaa", bbb: "bbb", ccc: "ccc"}) // {bbb: "bbb", ccc: "ccc"}
+exceptKey("aaa")(new Map([["aaa", "aaa"], ["bbb", "bbb"], ["ccc", "ccc"]])) // new Map([["bbb", "bbb"], ["ccc", "ccc"]])
+```
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/exceptKey.svg?maxAge=2592000&style=flat-square
+[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/exceptKey.svg?maxAge=2592000&style=flat-square
 
 ### [first](https://github.com/unctionjs/first#readme)()
 
@@ -1542,6 +1566,27 @@ itself(1) // 1
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/itself.svg?maxAge=2592000&style=flat-square
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/itself.svg?maxAge=2592000&style=flat-square
+
+### [keys](https://github.com/unctionjs/keys#readme)()
+
+![Tests][BADGE_TRAVIS]
+![Stability][BADGE_STABILITY]
+![Dependencies][BADGE_DEPENDENCY]
+
+```
+KeyedFunctor => Array<Key>
+```
+
+Takes a keyed iterable and returns the keys as an Array.
+
+``` javascript
+keys({aaa: "111", bbb: "222"}) // ["aaa", "bbb"]
+keys(["111", "222"]) // [0, 1]
+```
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/keys.svg?maxAge=2592000&style=flat-square
+[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/keys.svg?maxAge=2592000&style=flat-square
 
 ### [keyChainTree](https://github.com/unctionjs/keyChainTree#readme)()
 
@@ -2458,6 +2503,7 @@ Takes a list of functions and runs a value through that stack from left to right
 
 ``` javascript
 pipe([toString, toInteger])(0) // 0
+pipe([append("b"), append("a")])("c") // "cba"
 ```
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/pipe.svg?maxAge=2592000&style=flat-square
