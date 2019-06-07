@@ -51,13 +51,13 @@
     "tap": "12.6.2"
   },
   "dependencies": {
-    "@unction/allobjectp": "13.1.0",
+    "@unction/allobjectp": "13.2.0",
     "@unction/allp": "4.0.0",
     "@unction/always": "4.0.0",
     "@unction/append": "6.1.0",
     "@unction/appendm": "4.0.0",
     "@unction/applicator": "4.0.0",
-    "@unction/applicators": "13.1.0",
+    "@unction/applicators": "13.2.0",
     "@unction/arrayify": "7.1.0",
     "@unction/aside": "12.1.0",
     "@unction/attach": "7.1.0",
@@ -87,7 +87,7 @@
     "@unction/getmany": "2.1.0",
     "@unction/greaterthan": "3.0.0",
     "@unction/groupby": "10.1.1",
-    "@unction/hammer": "15.1.0",
+    "@unction/hammer": "15.2.0",
     "@unction/ifthenelse": "4.0.0",
     "@unction/indexby": "10.1.0",
     "@unction/inflatetree": "14.2.0",
@@ -139,11 +139,11 @@
     "@unction/resolvep": "4.0.0",
     "@unction/reversal": "1.0.0",
     "@unction/reverse": "9.1.0",
-    "@unction/sample": "15.1.0",
-    "@unction/samplesize": "16.1.0",
+    "@unction/sample": "15.2.0",
+    "@unction/samplesize": "16.2.0",
     "@unction/selectbyvalue": "1.1.0",
     "@unction/sequence": "10.1.0",
-    "@unction/shuffle": "13.1.0",
+    "@unction/shuffle": "13.2.0",
     "@unction/splat": "10.1.0",
     "@unction/split": "13.1.0",
     "@unction/startswith": "4.0.0",
@@ -160,7 +160,7 @@
     "@unction/values": "11.1.0",
     "@unction/where": "9.1.0",
     "@unction/withoutkeyrecursive": "12.2.0",
-    "@unction/zip": "12.1.0"
+    "@unction/zip": "12.2.0"
   },
   "nyc": {
     "require": [
