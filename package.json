@@ -32,7 +32,7 @@
     "@babel/core": "7.3.4",
     "@babel/plugin-proposal-object-rest-spread": "7.3.4",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
-    "@babel/preset-env": "7.3.4",
+    "@babel/preset-env": "7.4.4",
     "@babel/preset-typescript": "7.3.3",
     "@babel/register": "7.4.0",
     "babel-eslint": "10.0.1",
@@ -160,7 +160,8 @@
     "@unction/values": "11.1.0",
     "@unction/where": "9.1.0",
     "@unction/withoutkeyrecursive": "12.2.0",
-    "@unction/zip": "12.2.0"
+    "@unction/zip": "12.2.0",
+    "core-js": "3.0.1"
   },
   "nyc": {
     "require": [
