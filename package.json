@@ -22,8 +22,8 @@
     "prepublishOnly": "npm run build",
     "test": "NODE_ENV=test tap --100 './test.js'",
     "build": "npm run build:browser && npm run build:main",
-    "build:main": "babel --source-type module --source-maps true --out-file './main.js' './index.js'",
-    "build:browser": "babel --source-type module --source-maps true --out-file './browser.js' './index.js'",
+    "build:main": "babel --env-name main --out-file './main.js' './index.js'",
+    "build:browser": "babel --env-name browser --out-file './browser.js' './index.js'",
     "lint": "eslint './index.js'",
     "ci": "npm run test"
   },

@@ -1,15 +1,24 @@
 {
+  "sourceMaps": true,
   "presets": [
     "@babel/preset-typescript",
-    "@babel/env",
     "minify"
   ],
   "plugins": [
     ["module-resolver", {"alias": {"^@types/(.+)$": "./types/\\1"}}],
-    "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-object-rest-spread"
   ],
   "env": {
+    "main": {
+      "presets": [
+        ["@babel/preset-env", {"targets": {"node": 10}, "useBuiltIns": "usage", "corejs": 3}],
+      ]
+    },
+    "browser": {
+      "presets": [
+        ["@babel/preset-env", {"useBuiltIns": "usage", "corejs": 3}],
+      ]
+    },
     "test": {
       "plugins": [
         "istanbul",
