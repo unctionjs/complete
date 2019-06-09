@@ -177,6 +177,6 @@
     "browser.js",
     "browser.js.map"
   ],
-  "module": "index.js",
+  "module": "module.js",
   "browser": "browser.js"
 }
