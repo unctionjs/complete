@@ -1567,27 +1567,6 @@ itself(1) // 1
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/itself.svg?maxAge=2592000&style=flat-square
 
-### [keys](https://github.com/unctionjs/keys#readme)()
-
-![Tests][BADGE_TRAVIS]
-![Stability][BADGE_STABILITY]
-![Dependencies][BADGE_DEPENDENCY]
-
-```
-KeyedFunctor => Array<Key>
-```
-
-Takes a keyed iterable and returns the keys as an Array.
-
-``` javascript
-keys({aaa: "111", bbb: "222"}) // ["aaa", "bbb"]
-keys(["111", "222"]) // [0, 1]
-```
-
-[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/keys.svg?maxAge=2592000&style=flat-square
-[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
-[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/keys.svg?maxAge=2592000&style=flat-square
-
 ### [keyChainTree](https://github.com/unctionjs/keyChainTree#readme)()
 
 ![Tests][BADGE_TRAVIS]
@@ -1636,6 +1615,27 @@ which would return
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/keyChainTree.svg?maxAge=2592000&style=flat-square
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/keyChainTree.svg?maxAge=2592000&style=flat-square
+
+### [keys](https://github.com/unctionjs/keys#readme)()
+
+![Tests][BADGE_TRAVIS]
+![Stability][BADGE_STABILITY]
+![Dependencies][BADGE_DEPENDENCY]
+
+```
+KeyedFunctor => Array<Key>
+```
+
+Takes a keyed iterable and returns the keys as an Array.
+
+``` javascript
+keys({aaa: "111", bbb: "222"}) // ["aaa", "bbb"]
+keys(["111", "222"]) // [0, 1]
+```
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/keys.svg?maxAge=2592000&style=flat-square
+[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/keys.svg?maxAge=2592000&style=flat-square
 
 ### [lacksText](https://github.com/unctionjs/lacksText#readme)()
 
@@ -2336,6 +2336,41 @@ of(null)("bbb")([]) // ["bbb"]
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/of.svg?maxAge=2592000&style=flat-square
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/of.svg?maxAge=2592000&style=flat-square
+
+### [onlyKeys](https://github.com/unctionjs/onlyKeys#readme)()
+
+![Tests][BADGE_TRAVIS]
+![Stability][BADGE_STABILITY]
+![Dependencies][BADGE_DEPENDENCY]
+
+```
+Array<Key> => KeyedEnumerable => KeyedEnumerable
+```
+
+Reduces the keyed enumerable to an object with only the keys provided.
+
+``` javascript
+onlyKeys(
+  ["alpha", "beta", "delta"]
+)(
+  {
+    feta: "0",
+    alpha: "1",
+    beta: "2",
+    delta: "3",
+  }
+)
+
+// {
+//   alpha: "1",
+//   beta: "2",
+//   delta: "3",
+// }
+```
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/onlyKeys.svg?maxAge=2592000&style=flat-square
+[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/onlyKeys.svg?maxAge=2592000&style=flat-square
 
 ### [optimisticP](https://github.com/unctionjs/optimisticP#readme)()
 
@@ -3057,6 +3092,26 @@ Would return:
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/shuffle.svg?maxAge=2592000&style=flat-square
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/shuffle.svg?maxAge=2592000&style=flat-square
+
+### [sortBy](https://github.com/unctionjs/sortBy#readme)()
+
+![Tests][BADGE_TRAVIS]
+![Stability][BADGE_STABILITY]
+![Dependencies][BADGE_DEPENDENCY]
+
+```
+(mixed => mixed) => Array<mixed> => Array<mixed>
+```
+
+Sorts an array by a given computer function.
+
+``` javascript
+sortBy(({id}) => id)([{id: 3}, {id: 1}, {id: 2}]) // [{id: 1}, {id: 2}, {id: 3}]
+```
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/sortBy.svg?maxAge=2592000&style=flat-square
+[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/sortBy.svg?maxAge=2592000&style=flat-square
 
 ### [splat](https://github.com/unctionjs/splat#readme)()
 

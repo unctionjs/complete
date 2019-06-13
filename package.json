@@ -74,6 +74,7 @@
     "@unction/endswith": "4.1.0",
     "@unction/equals": "11.6.0",
     "@unction/everyp": "11.5.0",
+    "@unction/exceptkey": "12.5.0",
     "@unction/first": "3.1.0",
     "@unction/flatten": "10.5.0",
     "@unction/flattentree": "14.5.0",
@@ -101,6 +102,7 @@
     "@unction/istype": "6.5.0",
     "@unction/itself": "4.1.0",
     "@unction/keychaintree": "1.5.0",
+    "@unction/keys": "10.5.0",
     "@unction/lackstext": "5.1.0",
     "@unction/last": "11.5.0",
     "@unction/length": "10.5.0",
@@ -120,6 +122,7 @@
     "@unction/nestedapply": "12.5.0",
     "@unction/objectfrom": "1.5.0",
     "@unction/of": "5.5.0",
+    "@unction/onlykeys": "2.0.0",
     "@unction/optimisticp": "12.6.0",
     "@unction/pairskeys": "9.5.0",
     "@unction/pairsvalues": "4.1.0",
@@ -144,6 +147,7 @@
     "@unction/selectbyvalue": "1.5.0",
     "@unction/sequence": "10.5.0",
     "@unction/shuffle": "13.6.0",
+    "@unction/sortby": "1.0.0",
     "@unction/splat": "10.6.0",
     "@unction/split": "13.6.0",
     "@unction/startswith": "4.2.0",
@@ -160,8 +164,7 @@
     "@unction/values": "11.6.0",
     "@unction/where": "9.6.0",
     "@unction/withoutkeyrecursive": "12.7.0",
-    "@unction/zip": "12.7.0",
-    "core-js": "3.0.1"
+    "@unction/zip": "12.7.0"
   },
   "nyc": {
     "require": [

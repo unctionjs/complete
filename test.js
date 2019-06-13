@@ -49,8 +49,8 @@ import {isPopulated} from "./";
 import {isPresent} from "./";
 import {isType} from "./";
 import {itself} from "./";
-import {keys} from "./";
 import {keyChainTree} from "./";
+import {keys} from "./";
 import {lacksText} from "./";
 import {last} from "./";
 import {length} from "./";
@@ -70,6 +70,7 @@ import {mergeWithKey} from "./";
 import {nestedApply} from "./";
 import {objectFrom} from "./";
 import {of} from "./";
+import {onlyKeys} from "./";
 import {optimisticP} from "./";
 import {pairsKeys} from "./";
 import {pairsValues} from "./";
@@ -94,6 +95,7 @@ import {sampleSize} from "./";
 import {selectByValue} from "./";
 import {sequence} from "./";
 import {shuffle} from "./";
+import {sortBy} from "./";
 import {splat} from "./";
 import {split} from "./";
 import {startsWith} from "./";
@@ -362,13 +364,13 @@ test("itself is a function", ({type: assertType, end}) => {
   end();
 });
 
-test("keys is a function", ({type: assertType, end}) => {
-  assertType(keys, Function);
+test("keyChainTree is a function", ({type: assertType, end}) => {
+  assertType(keyChainTree, Function);
   end();
 });
 
-test("keyChainTree is a function", ({type: assertType, end}) => {
-  assertType(keyChainTree, Function);
+test("keys is a function", ({type: assertType, end}) => {
+  assertType(keys, Function);
   end();
 });
 
@@ -464,6 +466,11 @@ test("objectFrom is a function", ({type: assertType, end}) => {
 
 test("of is a function", ({type: assertType, end}) => {
   assertType(of, Function);
+  end();
+});
+
+test("onlyKeys is a function", ({type: assertType, end}) => {
+  assertType(onlyKeys, Function);
   end();
 });
 
@@ -584,6 +591,11 @@ test("sequence is a function", ({type: assertType, end}) => {
 
 test("shuffle is a function", ({type: assertType, end}) => {
   assertType(shuffle, Function);
+  end();
+});
+
+test("sortBy is a function", ({type: assertType, end}) => {
+  assertType(sortBy, Function);
   end();
 });
 
