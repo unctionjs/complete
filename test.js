@@ -112,6 +112,7 @@ import {upTo} from "./";
 import {values} from "./";
 import {where} from "./";
 import {withoutKeyRecursive} from "./";
+import {withoutKeys} from "./";
 import {zip} from "./";
 
 test("allObjectP is a function", ({type: assertType, end}) => {
@@ -676,6 +677,11 @@ test("where is a function", ({type: assertType, end}) => {
 
 test("withoutKeyRecursive is a function", ({type: assertType, end}) => {
   assertType(withoutKeyRecursive, Function);
+  end();
+});
+
+test("withoutKeys is a function", ({type: assertType, end}) => {
+  assertType(withoutKeys, Function);
   end();
 });
 

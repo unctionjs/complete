@@ -164,6 +164,7 @@
     "@unction/values": "11.7.0",
     "@unction/where": "9.7.0",
     "@unction/withoutkeyrecursive": "12.8.0",
+    "@unction/withoutkeys": "1.0.0",
     "@unction/zip": "12.8.0"
   },
   "nyc": {
