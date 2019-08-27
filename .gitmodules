@@ -1,3 +1,3 @@
 [submodule "types"]
-    path = types
-    url = https://github.com/unctionjs/_types.git
+	path = types
+	url = https://github.com/unctionjs/_types.git
