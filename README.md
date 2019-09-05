@@ -193,7 +193,7 @@ always(1)(0) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => (Array | string) => (Array | string)
+unknown => (Array | string) => (Array | string)
 ```
 
 Takes a value and puts it at the end of the given list.
@@ -269,7 +269,7 @@ applicator(inc)(1) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(Array<mixed => mixed> | Record<Key, mixed => mixed>)<T> => (Array | Record)<T> => (Array | Record)<T>
+(Array<unknown => unknown> | Record<Key, unknown => unknown>)<T> => (Array | Record)<T> => (Array | Record)<T>
 ```
 
 Takes a list of functions and a list of values and applies the values to the functions.
@@ -364,7 +364,7 @@ returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<mixed => mixed> => mixed => mixed
+Array<unknown => unknown> => unknown => unknown
 ```
 
 Takes a stack of functions, like `pipe()`, but always returns the second argument.
@@ -476,7 +476,7 @@ compact(head(users)) // {"name": "Kurtis Rainbolt-Greene"}
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<mixed => mixed> => mixed => mixed
+Array<unknown => unknown> => unknown => unknown
 ```
 
 Takes a list of functions and runs a value through that stack from right to left.
@@ -498,7 +498,7 @@ compose([append("b"), append("a")])("c") // "cab"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(Functor => mixed) => KeyChain => Functor => Functor
+(Functor => unknown) => KeyChain => Functor => Functor
 ```
 
 Given an object this function will return that object but with a new property, where the value is computed. The computation is given the object you'll be copying.
@@ -559,7 +559,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => mixed => [mixed, mixed]
+unknown => unknown => [unknown, unknown]
 ```
 
 Takes any value and then any value and returns an array containing those values.
@@ -721,7 +721,7 @@ endsWith("!")("Hello, world!") // true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => mixed => boolean
+unknown => unknown => boolean
 ```
 
 Compares two values and attempts to discern if they are truly equal.
@@ -795,7 +795,7 @@ exceptKey("aaa")(new Map([["aaa", "aaa"], ["bbb", "bbb"], ["ccc", "ccc"]])) // n
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(Array | string) => mixed
+(Array | string) => unknown
 ```
 
 Returns the first item of an ordered list.
@@ -891,7 +891,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunction => Value => Value => mixed
+MapperFunction => Value => Value => unknown
 ```
 
 Flips a function's first and second arguments.
@@ -933,7 +933,7 @@ forEach((x) => y)({})
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => mixed
+unknown => unknown
 ```
 
 Takes a value and returns an empty fresh version of that value.
@@ -999,7 +999,7 @@ fromFunctorToPairs(new Set(["a", "b", "c"])) // [[undefined, "a"], [undefined, "
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Iterator => Array<mixed>
+Iterator => Array<unknown>
 ```
 
 Takes an Iterator (SetIterator, MapIterator, etc) and turns it into an array.
@@ -1021,7 +1021,7 @@ fromIteratorToArray(new Map([["aaa", "a"], ["bbb", "b"], ["ccc", "c"]]).entries(
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Key => mixed => Value
+Key => unknown => Value
 ```
 
 Returns the value of a specific key on an iterable. If no key is found it returns undefined. If the second argument isn't an iterable we return undefined, to allow for graceful failure.
@@ -1217,7 +1217,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-PredicateFunction => UnaryFunction => UnaryFunction => mixed
+PredicateFunction => UnaryFunction => UnaryFunction => unknown
 ```
 
 Based on a predicate it passes the value to a consequent or alternative function
@@ -1403,7 +1403,7 @@ isArray("") // => false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => Boolean
+unknown => Boolean
 ```
 
 Determines if the value is an enumerable and if so returns true, else false.
@@ -1431,7 +1431,7 @@ isEnumerable(most.from([])) // true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => boolean
+unknown => boolean
 ```
 
 Determines if a value is not a value.
@@ -1458,7 +1458,7 @@ isNil({}) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => boolean
+unknown => boolean
 ```
 
 Takes a value and determines if it's an object.
@@ -1507,7 +1507,7 @@ isPopulated("a") // true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => boolean
+unknown => boolean
 ```
 
 This lets you know if it's a non-null, non-undefined value.
@@ -1667,7 +1667,7 @@ lacksBestFood(data) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(Array | string) => mixed
+(Array | string) => unknown
 ```
 
 Returns the last item of an ordered list.
@@ -2177,7 +2177,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(Functor => Functor => Key => mixed) => Functor => Functor => Functor
+(Functor => Functor => Key => unknown) => Functor => Functor => Functor
 ```
 
 Merges two iterables and uses a provided function to handle conflicts. The function is given the key, the left value, and the right value.
@@ -2379,7 +2379,7 @@ onlyKeys(
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<mixed | Promise<mixed>> => Promise<Array<mixed>>
+Array<unknown | Promise<unknown>> => Promise<Array<unknown>>
 ```
 
 Will take an array of promises and returns a promise of only the resolved promises.
@@ -2531,7 +2531,7 @@ partition(isOdd)([1,2,3,4]) // [[1,3],[2,4]]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<mixed => mixed> => mixed => mixed
+Array<unknown => unknown> => unknown => unknown
 ```
 
 Takes a list of functions and runs a value through that stack from left to right.
@@ -2657,7 +2657,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => (Array | string) => (Array | string)
+unknown => (Array | string) => (Array | string)
 ```
 
 Takes a value and puts it at the beginning of the given list.
@@ -2770,7 +2770,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(mixed => Value => (Key | void) => mixed) => mixed => Functor => mixed
+(unknown => Value => (Key | void) => unknown) => unknown => Functor => unknown
 ```
 
 Reduces over a functor, providing the reducer with the value and key.
@@ -2802,7 +2802,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => mixed
+unknown => unknown
 ```
 
 An example function.
@@ -2861,7 +2861,7 @@ remaining("abc") // "bc"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-PredicateFunction => mixed => Functor
+PredicateFunction => unknown => Functor
 ```
 
 Replaces values in an functor with another value based on a predicate.
@@ -3012,16 +3012,16 @@ selectByValue(isOdd)([1, 2, 3, 4]) // [1, 3]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<MapFunction> => mixed => Array
+Array<MapFunction> => unknown => Array
 ```
 ```
-Set<MapFunction> => mixed => Set
+Set<MapFunction> => unknown => Set
 ```
 ```
-Object<ObjectKey, MapFunction> => mixed => Object
+Object<ObjectKey, MapFunction> => unknown => Object
 ```
 ```
-Map<MapKey, MapFunction> => mixed => Map
+Map<MapKey, MapFunction> => unknown => Map
 ```
 
 Takes a list of functions, a value, and applies that value to each function, returning an array of results.
@@ -3100,7 +3100,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(mixed => mixed) => Array<mixed> => Array<mixed>
+(unknown => unknown) => Array<unknown> => Array<unknown>
 ```
 
 Sorts an array by a given computer function.
@@ -3121,7 +3121,7 @@ sortBy(({id}) => id)([{id: 3}, {id: 1}, {id: 2}]) // [{id: 1}, {id: 2}, {id: 3}]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Function => Array<Value> => mixed
+Function => Array<Value> => unknown
 ```
 
 Takes a function and a list of values and recursively applies the value to the functions.
@@ -3183,7 +3183,7 @@ startsWith("Hello")("Hello, world!") // true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-string => (mixed => mixed => boolean) => (string => position => any | any => any) => Stream => any
+string => (unknown => unknown => boolean) => (string => position => any | any => any) => Stream => any
 ```
 
 Takes a marble string, an assertion, a final state callback, and a stream so that you can assert in tests how a stream will function. Each marble should be deliniated by a `"---"` notation. If the last marble node is a "|" then it will make sure the stream has ended. Each "marble" will be evaluated before being compared.
@@ -3378,7 +3378,7 @@ test("Array diagram with error", ({equal, match, end}) => {
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => String
+unknown => String
 ```
 
 Return the super type of an value.
@@ -3448,7 +3448,7 @@ takeLast(1)("abc") // "c"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-UnaryFunction => UnaryFunction => Promise<mixed> =>  Promise<mixed>
+UnaryFunction => UnaryFunction => Promise<unknown> =>  Promise<unknown>
 ```
 
 A port of the `Promise.prototype.then()` function, but with the extra catch argument.
@@ -3468,7 +3468,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-UnaryFunction => Promise<mixed> => Promise<mixed>
+UnaryFunction => Promise<unknown> => Promise<unknown>
 ```
 
 A port of the `Promise.prototype.then()` function.
@@ -3488,7 +3488,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-mixed => UnaryFunction => mixed
+unknown => UnaryFunction => unknown
 ```
 
 One of the fantasy birds: it takes a value, a function, and then applies that value to as the first argument to that function.

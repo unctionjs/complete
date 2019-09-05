@@ -2,7 +2,7 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "module": "es6",
-    "target": "es6",
+    "target": "es2018",
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "moduleResolution": "node"
