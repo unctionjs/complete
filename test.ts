@@ -1,575 +1,345 @@
-import {allObjectP} from "./";
-import {allP} from "./";
-import {always} from "./";
-import {append} from "./";
-import {appendM} from "./";
-import {applicator} from "./";
-import {applicators} from "./";
-import {arrayify} from "./";
-import {aside} from "./";
-import {attach} from "./";
-import {catchP} from "./";
-import {compact} from "./";
-import {compose} from "./";
-import {computedProp} from "./";
-import {couple} from "./";
-import {dig} from "./";
-import {domEvents} from "./";
-import {domEventsMany} from "./";
-import {dropFirst} from "./";
-import {dropLast} from "./";
-import {endsWith} from "./";
-import {equals} from "./";
-import {everyP} from "./";
-import {exceptKey} from "./";
-import {first} from "./";
-import {flatten} from "./";
-import {flattenTree} from "./";
-import {flip} from "./";
-import {forEach} from "./";
-import {fresh} from "./";
-import {fromArrayToObject} from "./";
-import {fromFunctorToPairs} from "./";
-import {fromIteratorToArray} from "./";
-import {get} from "./";
-import {getMany} from "./";
-import {greaterThan} from "./";
-import {groupBy} from "./";
-import {hammer} from "./";
-import {ifThenElse} from "./";
-import {indexBy} from "./";
-import {inflateTree} from "./";
-import {initial} from "./";
-import {isArray} from "./";
-import {isEnumerable} from "./";
-import {isNil} from "./";
-import {isObject} from "./";
-import {isPopulated} from "./";
-import {isPresent} from "./";
-import {isType} from "./";
-import {itself} from "./";
-import {keyChainTree} from "./";
-import {keys} from "./";
-import {lacksText} from "./";
-import {last} from "./";
-import {length} from "./";
-import {lessThan} from "./";
-import {mapKeys} from "./";
-import {mapKeysWithValueKey} from "./";
-import {mapValues} from "./";
-import {mapValuesWithValueKey} from "./";
-import {mergeAllLeft} from "./";
-import {mergeAllRight} from "./";
-import {mergeDeepLeft} from "./";
-import {mergeDeepRight} from "./";
-import {mergeLeft} from "./";
-import {mergeRight} from "./";
-import {mergeWith} from "./";
-import {mergeWithKey} from "./";
-import {nestedApply} from "./";
-import {objectFrom} from "./";
-import {of} from "./";
-import {onlyKeys} from "./";
-import {optimisticP} from "./";
-import {pairsKeys} from "./";
-import {pairsValues} from "./";
-import {partition} from "./";
-import {pipe} from "./";
-import {pluck} from "./";
-import {plucks} from "./";
-import {prepend} from "./";
-import {range} from "./";
-import {reduceKeys} from "./";
-import {reduceValues} from "./";
-import {reduceWithValueKey} from "./";
-import {rejectByValue} from "./";
-import {rejectP} from "./";
-import {remaining} from "./";
-import {replaceWhen} from "./";
-import {resolveP} from "./";
-import {reversal} from "./";
-import {reverse} from "./";
-import {sample} from "./";
-import {sampleSize} from "./";
-import {selectByValue} from "./";
-import {sequence} from "./";
-import {shuffle} from "./";
-import {sortBy} from "./";
-import {splat} from "./";
-import {split} from "./";
-import {startsWith} from "./";
-import {streamSatisfies} from "./";
-import {supertype} from "./";
-import {takeFirst} from "./";
-import {takeLast} from "./";
-import {thenCatchP} from "./";
-import {thenP} from "./";
-import {thrush} from "./";
-import {treeify} from "./";
-import {type} from "./";
-import {upTo} from "./";
-import {values} from "./";
-import {where} from "./";
-import {withoutKeyRecursive} from "./";
-import {withoutKeys} from "./";
-import {zip} from "./";
-
-test("allObjectP is a function", () => {
-  assertType(allObjectP, Function);
-});
-
-test("allP is a function", () => {
-  assertType(allP, Function);
-});
-
-test("always is a function", () => {
-  assertType(always, Function);
-});
-
-test("append is a function", () => {
-  assertType(append, Function);
-});
-
-test("appendM is a function", () => {
-  assertType(appendM, Function);
-});
-
-test("applicator is a function", () => {
-  assertType(applicator, Function);
-});
-
-test("applicators is a function", () => {
-  assertType(applicators, Function);
-});
-
-test("arrayify is a function", () => {
-  assertType(arrayify, Function);
-});
-
-test("aside is a function", () => {
-  assertType(aside, Function);
-});
-
-test("attach is a function", () => {
-  assertType(attach, Function);
-});
-
-test("catchP is a function", () => {
-  assertType(catchP, Function);
-});
-
-test("compact is a function", () => {
-  assertType(compact, Function);
-});
-
-test("compose is a function", () => {
-  assertType(compose, Function);
-});
-
-test("computedProp is a function", () => {
-  assertType(computedProp, Function);
-});
-
-test("couple is a function", () => {
-  assertType(couple, Function);
-});
-
-test("dig is a function", () => {
-  assertType(dig, Function);
-});
-
-test("domEvents is a function", () => {
-  assertType(domEvents, Function);
-});
-
-test("domEventsMany is a function", () => {
-  assertType(domEventsMany, Function);
-});
-
-test("dropFirst is a function", () => {
-  assertType(dropFirst, Function);
-});
-
-test("dropLast is a function", () => {
-  assertType(dropLast, Function);
-});
-
-test("endsWith is a function", () => {
-  assertType(endsWith, Function);
-});
-
-test("equals is a function", () => {
-  assertType(equals, Function);
-});
-
-test("everyP is a function", () => {
-  assertType(everyP, Function);
-});
-
-test("exceptKey is a function", () => {
-  assertType(exceptKey, Function);
-});
-
-test("first is a function", () => {
-  assertType(first, Function);
-});
-
-test("flatten is a function", () => {
-  assertType(flatten, Function);
-});
-
-test("flattenTree is a function", () => {
-  assertType(flattenTree, Function);
-});
-
-test("flip is a function", () => {
-  assertType(flip, Function);
-});
-
-test("forEach is a function", () => {
-  assertType(forEach, Function);
-});
-
-test("fresh is a function", () => {
-  assertType(fresh, Function);
-});
-
-test("fromArrayToObject is a function", () => {
-  assertType(fromArrayToObject, Function);
-});
-
-test("fromFunctorToPairs is a function", () => {
-  assertType(fromFunctorToPairs, Function);
-});
-
-test("fromIteratorToArray is a function", () => {
-  assertType(fromIteratorToArray, Function);
-});
-
-test("get is a function", () => {
-  assertType(get, Function);
-});
-
-test("getMany is a function", () => {
-  assertType(getMany, Function);
-});
-
-test("greaterThan is a function", () => {
-  assertType(greaterThan, Function);
-});
-
-test("groupBy is a function", () => {
-  assertType(groupBy, Function);
-});
-
-test("hammer is a function", () => {
-  assertType(hammer, Function);
-});
-
-test("ifThenElse is a function", () => {
-  assertType(ifThenElse, Function);
-});
-
-test("indexBy is a function", () => {
-  assertType(indexBy, Function);
-});
-
-test("inflateTree is a function", () => {
-  assertType(inflateTree, Function);
-});
-
-test("initial is a function", () => {
-  assertType(initial, Function);
-});
-
-test("isArray is a function", () => {
-  assertType(isArray, Function);
-});
-
-test("isEnumerable is a function", () => {
-  assertType(isEnumerable, Function);
-});
-
-test("isNil is a function", () => {
-  assertType(isNil, Function);
-});
-
-test("isObject is a function", () => {
-  assertType(isObject, Function);
-});
-
-test("isPopulated is a function", () => {
-  assertType(isPopulated, Function);
-});
-
-test("isPresent is a function", () => {
-  assertType(isPresent, Function);
-});
-
-test("isType is a function", () => {
-  assertType(isType, Function);
-});
-
-test("itself is a function", () => {
-  assertType(itself, Function);
-});
-
-test("keyChainTree is a function", () => {
-  assertType(keyChainTree, Function);
-});
-
-test("keys is a function", () => {
-  assertType(keys, Function);
-});
-
-test("lacksText is a function", () => {
-  assertType(lacksText, Function);
-});
-
-test("last is a function", () => {
-  assertType(last, Function);
-});
-
-test("length is a function", () => {
-  assertType(length, Function);
-});
-
-test("lessThan is a function", () => {
-  assertType(lessThan, Function);
-});
-
-test("mapKeys is a function", () => {
-  assertType(mapKeys, Function);
-});
-
-test("mapKeysWithValueKey is a function", () => {
-  assertType(mapKeysWithValueKey, Function);
-});
-
-test("mapValues is a function", () => {
-  assertType(mapValues, Function);
-});
-
-test("mapValuesWithValueKey is a function", () => {
-  assertType(mapValuesWithValueKey, Function);
-});
-
-test("mergeAllLeft is a function", () => {
-  assertType(mergeAllLeft, Function);
-});
-
-test("mergeAllRight is a function", () => {
-  assertType(mergeAllRight, Function);
-});
-
-test("mergeDeepLeft is a function", () => {
-  assertType(mergeDeepLeft, Function);
-});
-
-test("mergeDeepRight is a function", () => {
-  assertType(mergeDeepRight, Function);
-});
-
-test("mergeLeft is a function", () => {
-  assertType(mergeLeft, Function);
-});
-
-test("mergeRight is a function", () => {
-  assertType(mergeRight, Function);
-});
-
-test("mergeWith is a function", () => {
-  assertType(mergeWith, Function);
-});
-
-test("mergeWithKey is a function", () => {
-  assertType(mergeWithKey, Function);
-});
-
-test("nestedApply is a function", () => {
-  assertType(nestedApply, Function);
-});
-
-test("objectFrom is a function", () => {
-  assertType(objectFrom, Function);
-});
-
-test("of is a function", () => {
-  assertType(of, Function);
-});
-
-test("onlyKeys is a function", () => {
-  assertType(onlyKeys, Function);
-});
-
-test("optimisticP is a function", () => {
-  assertType(optimisticP, Function);
-});
-
-test("pairsKeys is a function", () => {
-  assertType(pairsKeys, Function);
-});
-
-test("pairsValues is a function", () => {
-  assertType(pairsValues, Function);
-});
-
-test("partition is a function", () => {
-  assertType(partition, Function);
-});
-
-test("pipe is a function", () => {
-  assertType(pipe, Function);
-});
-
-test("pluck is a function", () => {
-  assertType(pluck, Function);
-});
-
-test("plucks is a function", () => {
-  assertType(plucks, Function);
-});
-
-test("prepend is a function", () => {
-  assertType(prepend, Function);
-});
-
-test("range is a function", () => {
-  assertType(range, Function);
-});
-
-test("reduceKeys is a function", () => {
-  assertType(reduceKeys, Function);
-});
-
-test("reduceValues is a function", () => {
-  assertType(reduceValues, Function);
-});
-
-test("reduceWithValueKey is a function", () => {
-  assertType(reduceWithValueKey, Function);
-});
-
-test("rejectByValue is a function", () => {
-  assertType(rejectByValue, Function);
-});
-
-test("rejectP is a function", () => {
-  assertType(rejectP, Function);
-});
-
-test("remaining is a function", () => {
-  assertType(remaining, Function);
-});
-
-test("replaceWhen is a function", () => {
-  assertType(replaceWhen, Function);
-});
-
-test("resolveP is a function", () => {
-  assertType(resolveP, Function);
-});
-
-test("reversal is a function", () => {
-  assertType(reversal, Function);
-});
-
-test("reverse is a function", () => {
-  assertType(reverse, Function);
-});
-
-test("sample is a function", () => {
-  assertType(sample, Function);
-});
-
-test("sampleSize is a function", () => {
-  assertType(sampleSize, Function);
-});
-
-test("selectByValue is a function", () => {
-  assertType(selectByValue, Function);
-});
-
-test("sequence is a function", () => {
-  assertType(sequence, Function);
-});
-
-test("shuffle is a function", () => {
-  assertType(shuffle, Function);
-});
-
-test("sortBy is a function", () => {
-  assertType(sortBy, Function);
-});
-
-test("splat is a function", () => {
-  assertType(splat, Function);
-});
-
-test("split is a function", () => {
-  assertType(split, Function);
-});
-
-test("startsWith is a function", () => {
-  assertType(startsWith, Function);
-});
-
-test("streamSatisfies is a function", () => {
-  assertType(streamSatisfies, Function);
-});
-
-test("supertype is a function", () => {
-  assertType(supertype, Function);
-});
-
-test("takeFirst is a function", () => {
-  assertType(takeFirst, Function);
-});
-
-test("takeLast is a function", () => {
-  assertType(takeLast, Function);
-});
-
-test("thenCatchP is a function", () => {
-  assertType(thenCatchP, Function);
-});
-
-test("thenP is a function", () => {
-  assertType(thenP, Function);
-});
-
-test("thrush is a function", () => {
-  assertType(thrush, Function);
-});
-
-test("treeify is a function", () => {
-  assertType(treeify, Function);
-});
-
-test("type is a function", () => {
-  assertType(type, Function);
-});
-
-test("upTo is a function", () => {
-  assertType(upTo, Function);
-});
-
-test("values is a function", () => {
-  assertType(values, Function);
-});
-
-test("where is a function", () => {
-  assertType(where, Function);
-});
-
-test("withoutKeyRecursive is a function", () => {
-  assertType(withoutKeyRecursive, Function);
-});
-
-test("withoutKeys is a function", () => {
-  assertType(withoutKeys, Function);
-});
-
-test("zip is a function", () => {
-  assertType(zip, Function);
-});
+import {allObjectP} from "./index";
+import {allP} from "./index";
+import {always} from "./index";
+import {append} from "./index";
+import {appendM} from "./index";
+import {applicator} from "./index";
+import {applicators} from "./index";
+import {arrayify} from "./index";
+import {aside} from "./index";
+import {attach} from "./index";
+import {catchP} from "./index";
+import {compact} from "./index";
+import {compose} from "./index";
+import {computedProp} from "./index";
+import {couple} from "./index";
+import {dig} from "./index";
+import {domEvents} from "./index";
+import {domEventsMany} from "./index";
+import {dropFirst} from "./index";
+import {dropLast} from "./index";
+import {endsWith} from "./index";
+import {equals} from "./index";
+import {everyP} from "./index";
+import {exceptKey} from "./index";
+import {first} from "./index";
+import {flatten} from "./index";
+import {flattenTree} from "./index";
+import {flip} from "./index";
+import {forEach} from "./index";
+import {fresh} from "./index";
+import {fromArrayToObject} from "./index";
+import {fromFunctorToPairs} from "./index";
+import {fromIteratorToArray} from "./index";
+import {get} from "./index";
+import {getMany} from "./index";
+import {greaterThan} from "./index";
+import {groupBy} from "./index";
+import {hammer} from "./index";
+import {ifThenElse} from "./index";
+import {indexBy} from "./index";
+import {inflateTree} from "./index";
+import {initial} from "./index";
+import {isArray} from "./index";
+import {isEnumerable} from "./index";
+import {isNil} from "./index";
+import {isObject} from "./index";
+import {isPopulated} from "./index";
+import {isPresent} from "./index";
+import {isType} from "./index";
+import {itself} from "./index";
+import {keyChainTree} from "./index";
+import {keys} from "./index";
+import {lacksText} from "./index";
+import {last} from "./index";
+import {length} from "./index";
+import {lessThan} from "./index";
+import {mapKeys} from "./index";
+import {mapKeysWithValueKey} from "./index";
+import {mapValues} from "./index";
+import {mapValuesWithValueKey} from "./index";
+import {mergeAllLeft} from "./index";
+import {mergeAllRight} from "./index";
+import {mergeDeepLeft} from "./index";
+import {mergeDeepRight} from "./index";
+import {mergeLeft} from "./index";
+import {mergeRight} from "./index";
+import {mergeWith} from "./index";
+import {mergeWithKey} from "./index";
+import {nestedApply} from "./index";
+import {objectFrom} from "./index";
+import {of} from "./index";
+import {onlyKeys} from "./index";
+import {optimisticP} from "./index";
+import {pairsKeys} from "./index";
+import {pairsValues} from "./index";
+import {partition} from "./index";
+import {pipe} from "./index";
+import {pluck} from "./index";
+import {plucks} from "./index";
+import {prepend} from "./index";
+import {range} from "./index";
+import {reduceKeys} from "./index";
+import {reduceValues} from "./index";
+import {reduceWithValueKey} from "./index";
+import {rejectByValue} from "./index";
+import {rejectP} from "./index";
+import {remaining} from "./index";
+import {replaceWhen} from "./index";
+import {resolveP} from "./index";
+import {reversal} from "./index";
+import {reverse} from "./index";
+import {sample} from "./index";
+import {sampleSize} from "./index";
+import {selectByValue} from "./index";
+import {sequence} from "./index";
+import {shuffle} from "./index";
+import {sortBy} from "./index";
+import {splat} from "./index";
+import {split} from "./index";
+import {startsWith} from "./index";
+import {streamSatisfies} from "./index";
+import {supertype} from "./index";
+import {takeFirst} from "./index";
+import {takeLast} from "./index";
+import {thenCatchP} from "./index";
+import {thenP} from "./index";
+import {thrush} from "./index";
+import {treeify} from "./index";
+import {type} from "./index";
+import {upTo} from "./index";
+import {values} from "./index";
+import {where} from "./index";
+import {withoutKeyRecursive} from "./index";
+import {withoutKeys} from "./index";
+import {zip} from "./index";
+
+test("allObjectP is a function", () => expect(allObjectP).toBeInstanceOf(Function));
+
+test("allP is a function", () => expect(allP).toBeInstanceOf(Function));
+
+test("always is a function", () => expect(always).toBeInstanceOf(Function));
+
+test("append is a function", () => expect(append).toBeInstanceOf(Function));
+
+test("appendM is a function", () => expect(appendM).toBeInstanceOf(Function));
+
+test("applicator is a function", () => expect(applicator).toBeInstanceOf(Function));
+
+test("applicators is a function", () => expect(applicators).toBeInstanceOf(Function));
+
+test("arrayify is a function", () => expect(arrayify).toBeInstanceOf(Function));
+
+test("aside is a function", () => expect(aside).toBeInstanceOf(Function));
+
+test("attach is a function", () => expect(attach).toBeInstanceOf(Function));
+
+test("catchP is a function", () => expect(catchP).toBeInstanceOf(Function));
+
+test("compact is a function", () => expect(compact).toBeInstanceOf(Function));
+
+test("compose is a function", () => expect(compose).toBeInstanceOf(Function));
+
+test("computedProp is a function", () => expect(computedProp).toBeInstanceOf(Function));
+
+test("couple is a function", () => expect(couple).toBeInstanceOf(Function));
+
+test("dig is a function", () => expect(dig).toBeInstanceOf(Function));
+
+test("domEvents is a function", () => expect(domEvents).toBeInstanceOf(Function));
+
+test("domEventsMany is a function", () => expect(domEventsMany).toBeInstanceOf(Function));
+
+test("dropFirst is a function", () => expect(dropFirst).toBeInstanceOf(Function));
+
+test("dropLast is a function", () => expect(dropLast).toBeInstanceOf(Function));
+
+test("endsWith is a function", () => expect(endsWith).toBeInstanceOf(Function));
+
+test("equals is a function", () => expect(equals).toBeInstanceOf(Function));
+
+test("everyP is a function", () => expect(everyP).toBeInstanceOf(Function));
+
+test("exceptKey is a function", () => expect(exceptKey).toBeInstanceOf(Function));
+
+test("first is a function", () => expect(first).toBeInstanceOf(Function));
+
+test("flatten is a function", () => expect(flatten).toBeInstanceOf(Function));
+
+test("flattenTree is a function", () => expect(flattenTree).toBeInstanceOf(Function));
+
+test("flip is a function", () => expect(flip).toBeInstanceOf(Function));
+
+test("forEach is a function", () => expect(forEach).toBeInstanceOf(Function));
+
+test("fresh is a function", () => expect(fresh).toBeInstanceOf(Function));
+
+test("fromArrayToObject is a function", () => expect(fromArrayToObject).toBeInstanceOf(Function));
+
+test("fromFunctorToPairs is a function", () => expect(fromFunctorToPairs).toBeInstanceOf(Function));
+
+test("fromIteratorToArray is a function", () => expect(fromIteratorToArray).toBeInstanceOf(Function));
+
+test("get is a function", () => expect(get).toBeInstanceOf(Function));
+
+test("getMany is a function", () => expect(getMany).toBeInstanceOf(Function));
+
+test("greaterThan is a function", () => expect(greaterThan).toBeInstanceOf(Function));
+
+test("groupBy is a function", () => expect(groupBy).toBeInstanceOf(Function));
+
+test("hammer is a function", () => expect(hammer).toBeInstanceOf(Function));
+
+test("ifThenElse is a function", () => expect(ifThenElse).toBeInstanceOf(Function));
+
+test("indexBy is a function", () => expect(indexBy).toBeInstanceOf(Function));
+
+test("inflateTree is a function", () => expect(inflateTree).toBeInstanceOf(Function));
+
+test("initial is a function", () => expect(initial).toBeInstanceOf(Function));
+
+test("isArray is a function", () => expect(isArray).toBeInstanceOf(Function));
+
+test("isEnumerable is a function", () => expect(isEnumerable).toBeInstanceOf(Function));
+
+test("isNil is a function", () => expect(isNil).toBeInstanceOf(Function));
+
+test("isObject is a function", () => expect(isObject).toBeInstanceOf(Function));
+
+test("isPopulated is a function", () => expect(isPopulated).toBeInstanceOf(Function));
+
+test("isPresent is a function", () => expect(isPresent).toBeInstanceOf(Function));
+
+test("isType is a function", () => expect(isType).toBeInstanceOf(Function));
+
+test("itself is a function", () => expect(itself).toBeInstanceOf(Function));
+
+test("keyChainTree is a function", () => expect(keyChainTree).toBeInstanceOf(Function));
+
+test("keys is a function", () => expect(keys).toBeInstanceOf(Function));
+
+test("lacksText is a function", () => expect(lacksText).toBeInstanceOf(Function));
+
+test("last is a function", () => expect(last).toBeInstanceOf(Function));
+
+test("length is a function", () => expect(length).toBeInstanceOf(Function));
+
+test("lessThan is a function", () => expect(lessThan).toBeInstanceOf(Function));
+
+test("mapKeys is a function", () => expect(mapKeys).toBeInstanceOf(Function));
+
+test("mapKeysWithValueKey is a function", () => expect(mapKeysWithValueKey).toBeInstanceOf(Function));
+
+test("mapValues is a function", () => expect(mapValues).toBeInstanceOf(Function));
+
+test("mapValuesWithValueKey is a function", () => expect(mapValuesWithValueKey).toBeInstanceOf(Function));
+
+test("mergeAllLeft is a function", () => expect(mergeAllLeft).toBeInstanceOf(Function));
+
+test("mergeAllRight is a function", () => expect(mergeAllRight).toBeInstanceOf(Function));
+
+test("mergeDeepLeft is a function", () => expect(mergeDeepLeft).toBeInstanceOf(Function));
+
+test("mergeDeepRight is a function", () => expect(mergeDeepRight).toBeInstanceOf(Function));
+
+test("mergeLeft is a function", () => expect(mergeLeft).toBeInstanceOf(Function));
+
+test("mergeRight is a function", () => expect(mergeRight).toBeInstanceOf(Function));
+
+test("mergeWith is a function", () => expect(mergeWith).toBeInstanceOf(Function));
+
+test("mergeWithKey is a function", () => expect(mergeWithKey).toBeInstanceOf(Function));
+
+test("nestedApply is a function", () => expect(nestedApply).toBeInstanceOf(Function));
+
+test("objectFrom is a function", () => expect(objectFrom).toBeInstanceOf(Function));
+
+test("of is a function", () => expect(of).toBeInstanceOf(Function));
+
+test("onlyKeys is a function", () => expect(onlyKeys).toBeInstanceOf(Function));
+
+test("optimisticP is a function", () => expect(optimisticP).toBeInstanceOf(Function));
+
+test("pairsKeys is a function", () => expect(pairsKeys).toBeInstanceOf(Function));
+
+test("pairsValues is a function", () => expect(pairsValues).toBeInstanceOf(Function));
+
+test("partition is a function", () => expect(partition).toBeInstanceOf(Function));
+
+test("pipe is a function", () => expect(pipe).toBeInstanceOf(Function));
+
+test("pluck is a function", () => expect(pluck).toBeInstanceOf(Function));
+
+test("plucks is a function", () => expect(plucks).toBeInstanceOf(Function));
+
+test("prepend is a function", () => expect(prepend).toBeInstanceOf(Function));
+
+test("range is a function", () => expect(range).toBeInstanceOf(Function));
+
+test("reduceKeys is a function", () => expect(reduceKeys).toBeInstanceOf(Function));
+
+test("reduceValues is a function", () => expect(reduceValues).toBeInstanceOf(Function));
+
+test("reduceWithValueKey is a function", () => expect(reduceWithValueKey).toBeInstanceOf(Function));
+
+test("rejectByValue is a function", () => expect(rejectByValue).toBeInstanceOf(Function));
+
+test("rejectP is a function", () => expect(rejectP).toBeInstanceOf(Function));
+
+test("remaining is a function", () => expect(remaining).toBeInstanceOf(Function));
+
+test("replaceWhen is a function", () => expect(replaceWhen).toBeInstanceOf(Function));
+
+test("resolveP is a function", () => expect(resolveP).toBeInstanceOf(Function));
+
+test("reversal is a function", () => expect(reversal).toBeInstanceOf(Function));
+
+test("reverse is a function", () => expect(reverse).toBeInstanceOf(Function));
+
+test("sample is a function", () => expect(sample).toBeInstanceOf(Function));
+
+test("sampleSize is a function", () => expect(sampleSize).toBeInstanceOf(Function));
+
+test("selectByValue is a function", () => expect(selectByValue).toBeInstanceOf(Function));
+
+test("sequence is a function", () => expect(sequence).toBeInstanceOf(Function));
+
+test("shuffle is a function", () => expect(shuffle).toBeInstanceOf(Function));
+
+test("sortBy is a function", () => expect(sortBy).toBeInstanceOf(Function));
+
+test("splat is a function", () => expect(splat).toBeInstanceOf(Function));
+
+test("split is a function", () => expect(split).toBeInstanceOf(Function));
+
+test("startsWith is a function", () => expect(startsWith).toBeInstanceOf(Function));
+
+test("streamSatisfies is a function", () => expect(streamSatisfies).toBeInstanceOf(Function));
+
+test("supertype is a function", () => expect(supertype).toBeInstanceOf(Function));
+
+test("takeFirst is a function", () => expect(takeFirst).toBeInstanceOf(Function));
+
+test("takeLast is a function", () => expect(takeLast).toBeInstanceOf(Function));
+
+test("thenCatchP is a function", () => expect(thenCatchP).toBeInstanceOf(Function));
+
+test("thenP is a function", () => expect(thenP).toBeInstanceOf(Function));
+
+test("thrush is a function", () => expect(thrush).toBeInstanceOf(Function));
+
+test("treeify is a function", () => expect(treeify).toBeInstanceOf(Function));
+
+test("type is a function", () => expect(type).toBeInstanceOf(Function));
+
+test("upTo is a function", () => expect(upTo).toBeInstanceOf(Function));
+
+test("values is a function", () => expect(values).toBeInstanceOf(Function));
+
+test("where is a function", () => expect(where).toBeInstanceOf(Function));
+
+test("withoutKeyRecursive is a function", () => expect(withoutKeyRecursive).toBeInstanceOf(Function));
+
+test("withoutKeys is a function", () => expect(withoutKeys).toBeInstanceOf(Function));
+
+test("zip is a function", () => expect(zip).toBeInstanceOf(Function));
