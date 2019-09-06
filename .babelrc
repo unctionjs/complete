@@ -1,27 +1,29 @@
 {
   "sourceMaps": "inline",
   "presets": [
-    "@babel/preset-typescript",
-    "minify"
+    "@babel/preset-typescript"
   ],
   "plugins": [
-    ["module-resolver", {"alias": {"^@types/(.+)$": "./types/\\1"}}],
     "@babel/plugin-proposal-object-rest-spread"
   ],
   "env": {
     "main": {
       "presets": [
         ["@babel/preset-env", {"targets": {"node": 10}, "useBuiltIns": "usage", "corejs": 3}],
+        "minify"
       ]
     },
     "browser": {
       "presets": [
         ["@babel/preset-env", {"useBuiltIns": "usage", "corejs": 3}],
+        "minify"
       ]
     },
     "test": {
+      "presets": [
+        ["@babel/preset-env", {"targets": {"node": "current"}, "useBuiltIns": "usage", "corejs": 3}],
+      ],
       "plugins": [
-        "istanbul",
         "annotate-console-log"
       ]
     }
