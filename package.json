@@ -173,7 +173,6 @@
     "index.ts",
     "main.js",
     "browser.js",
-    "types.d.ts",
     "types/*.d.ts"
   ],
   "module": "module.js",
