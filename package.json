@@ -172,9 +172,9 @@
   "files": [
     "index.ts",
     "main.js",
-    "main.js.map",
     "browser.js",
-    "browser.js.map"
+    "types.d.ts",
+    "types/*.d.ts"
   ],
   "module": "module.js",
   "browser": "browser.js",
