@@ -177,5 +177,6 @@
   ],
   "module": "module.js",
   "browser": "browser.js",
-  "types": "types.d.ts"
+  "types": "types.d.ts",
+  "sideEffects": false
 }
