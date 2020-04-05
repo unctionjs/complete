@@ -100,7 +100,6 @@ pipe([fetchResources, asStateTree])
 
 ### [allObjectP](https://github.com/unctionjs/allObjectP#readme)()
 
-
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
@@ -114,36 +113,17 @@ This takes an object where the values are probably promises and returns a promis
 Here's a good example of this function in use:
 
 ``` javascript
-function signUp (attributes, slug) {
-  return function thunk (dispatch, getState, {client}) {
-    return allObjectP({
-      loading: startLoading(slug),
-      session: pushSession(attributes, client)
-    })
-      .then(({session}) => {
-        return allObjectP({
-          merge: mergeResource(session),
-          current: storeCurrent(session.id),
-          account: pullAccount(session.relationship.account.data.id, client),
-        })
-      })
-      .then(({account}) => {
-        return {
-          merge: mergeResource(account),
-          current: storeCurrent(account.id),
-        }
-      })
-      .then(() => stopLoading(slug))
-      .then(() => dispatch({type: "signUp"}))
-      .catch(logger.error.bind(error))
-  }
-}
+await allObjectP({
+  merge: mergeResource(session),
+  current: storeCurrent(session.id),
+  account: pullAccount(session.relationship.account.data.id, client),
+})
+// {merge, current, account}
 ```
 
 If we use `allP` or `Promise.all` we're getting an array back, but that's annoying to destructure. The `allObjectP` function gives us the concurrency we want with a named interface for the returned resolutions.
 
 [BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/allObjectP.svg?maxAge=2592000&style=flat-square
-
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/allObjectP.svg?maxAge=2592000&style=flat-square
 
@@ -272,7 +252,7 @@ applicator(inc)(1) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(Array<unknown => unknown> | RecordType<KeyType, unknown => unknown>)<T> => (ArrayType | RecordType)<T> => (ArrayType | RecordType)<T>
+EnumerableType<MapperFunctionType<A, B>, C> => EnumerableType<A, C> => EnumerableType<B, C>
 ```
 
 Takes a list of functions and a list of values and applies the values to the functions.
@@ -711,7 +691,7 @@ dropLast(1)("abc") // "ab"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-TextType | RegExp => TextType => boolean
+string => string => boolean
 ```
 
 Determines if a given subset of text is at the end of another set of text.
@@ -1655,7 +1635,7 @@ keys(["111", "222"]) // [0, 1]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-TextType | RegExp => TextType => boolean
+string => string => boolean
 ```
 
 Determines if a set of text does not have a subset of text.
@@ -3184,7 +3164,7 @@ split(/-+/)("a---b") // ["a", "b"]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-TextType | RegExp => TextType => boolean
+string => string => boolean
 ```
 
 Determines if a given subset of text is at the start of another set of text.
@@ -3918,4 +3898,24 @@ returns
 
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
 [BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/zip.svg?maxAge=2592000&style=flat-square
+
+### [matchesRegExp](https://github.com/unctionjs/matchesRegExp#readme)()
+
+![Tests][BADGE_TRAVIS]
+![Stability][BADGE_STABILITY]
+![Dependencies][BADGE_DEPENDENCY]
+
+```
+RegExp => string => Boolean
+```
+
+Compares a regular expression and a string.
+
+``` javascript
+matchesRegExp(/abcd/)("abcde") // true
+```
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/matchesRegExp.svg?maxAge=2592000&style=flat-square
+[BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/matchesRegExp.svg?maxAge=2592000&style=flat-square
 

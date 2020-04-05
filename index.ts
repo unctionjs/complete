@@ -113,3 +113,4 @@ export {default as where} from "@unction/where";
 export {default as withoutKeyRecursive} from "@unction/withoutkeyrecursive";
 export {default as withoutKeys} from "@unction/withoutkeys";
 export {default as zip} from "@unction/zip";
+export {default as matchesRegExp} from "@unction/matchesregexp";

@@ -113,6 +113,7 @@ import {where} from "./index";
 import {withoutKeyRecursive} from "./index";
 import {withoutKeys} from "./index";
 import {zip} from "./index";
+import {matchesRegExp} from "./index";
 
 test("allObjectP is a function", () => expect(allObjectP).toBeInstanceOf(Function));
 
@@ -343,3 +344,5 @@ test("withoutKeyRecursive is a function", () => expect(withoutKeyRecursive).toBe
 test("withoutKeys is a function", () => expect(withoutKeys).toBeInstanceOf(Function));
 
 test("zip is a function", () => expect(zip).toBeInstanceOf(Function));
+
+test("matchesRegExp is a function", () => expect(matchesRegExp).toBeInstanceOf(Function));
