@@ -177,7 +177,7 @@ always(1)(0) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-A => OrderedEnumerableType<B> => OrderedEnumerableType<C>
+A => OrderedArray<B> | Set<B> | RecordType<B, unknown> | string => OrderedEnumerableType<C>
 ```
 
 Takes a value and puts it at the end of the given list.
@@ -441,7 +441,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A | null> => EnumerableType<A>
+EnumerableType<A | null> => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Takes a collection (Array or Object) and returns a copy of that value without `null` or `undefined` values.
@@ -645,7 +645,7 @@ returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-number => OrderedEnumerableType<A> => OrderedEnumerableType<A>
+number => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Returns all but the first N of a list of ordered values.
@@ -668,7 +668,7 @@ dropFirst(1)("abc") // "bc"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-number => OrderedEnumerableType<A> => OrderedEnumerableType<A>
+number => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Returns all but the last N of a list of ordered values.
@@ -785,7 +785,7 @@ exceptKey("aaa")(new Map([["aaa", "aaa"], ["bbb", "bbb"], ["ccc", "ccc"]])) // n
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-OrderedEnumerableType<A> => A | string | void
+OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => A | string | void
 ```
 
 Returns the first item of an ordered list.
@@ -806,7 +806,7 @@ first("abc") // "a"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<EnumerableType<A> | A> => EnumerableType<A>
+EnumerableType<Array<A> | Set<A> | RecordType<unknown, A> | string | A> => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Takes a multi-dimensional enumerable and decreases the nesting by one.
@@ -835,7 +835,7 @@ flatten(
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-TextType => RecordType<A, B> => RecordType<A, B>
+string => Record<string | number | symbol, B> | Map<A, B> => Record<string | number | symbol, B> | Map<A, B>
 ```
 
 Takes a tree and creates a single object where the root keys are conjoined nested keys.
@@ -901,7 +901,7 @@ flip(key)({aaa: "1"})("aaa") // "1"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
- MapperFunctionType<A, B> => EnumerableType<A> => EnumerableType<A>
+ MapperFunctionType<A, B> => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Takes any kind of enumerable and figures out the best way to iterate over it.
@@ -1036,7 +1036,7 @@ get(0)(["aaa"]) // "aaa"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<A> => KeyedEnumerableType<B, A> => Array<B>
+Array<A> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B>
 ```
 
 Takes a list of keys and a keyed enumerable, and returns the values for those keys. If no key exists, the value is undefined.
@@ -1078,7 +1078,7 @@ greaterThan(0)(1) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType<A, B> => ListType<A> => Map<B, ListType<A>>
+MapperFunctionType<A, B> => Array<A> | Set<A> => Map<B, Array<A> | Set<A>>
 ```
 
 Creates a record tree where the key is a computation on the value and the value is a list of the values that match with that computation.
@@ -1169,7 +1169,7 @@ Map {
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-A => KeyedEnumerableType<B, A> => KeyedEnumerableType<B, A>
+A => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string
 ```
 
 Use this to de-nest a nested keyed enumerable.
@@ -1229,7 +1229,7 @@ ifThenElse(isEven)(toString)(toFloat)(2) // "2"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType<A, B> => ListType<A> => Map<B, A>
+MapperFunctionType<A, B> => Array<A> | Set<A> => Map<B, A>
 ```
 
 Creates a record tree where the key is a computation on the value and the value is the original value.
@@ -1307,7 +1307,7 @@ new Map([
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-TextType => RecordType<A, B> => RecordType<A, C>
+string => Record<string | number | symbol, B> | Map<A, B> => RecordType<A, C>
 ```
 
 Takes a flat record with a specific key pattern and turns it into a nested record.
@@ -1351,7 +1351,7 @@ which returns
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-OrderedEnumerableType<A> => OrderedEnumerableType<A>
+OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Returns all but the last item in an ordered list.
@@ -1472,7 +1472,7 @@ isObject("") // => false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A> => boolean
+Array<A> | Set<A> | RecordType<unknown, A> | string => boolean
 ```
 
 Allows you to check if a enumerable has any items.
@@ -1565,7 +1565,7 @@ itself(1) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-RecordType<A, B> => Array<KeyChainType<A>>
+Record<string | number | symbol, B> | Map<A, B> => Array<KeyChainType<A>>
 ```
 
 Takes a tree and returns all keychains for that tree. Note, it only follows record types (types with keys).
@@ -1658,7 +1658,7 @@ lacksBestFood(data) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-OrderedEnumerableType<A> => A
+OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => A
 ```
 
 Returns the last item of an ordered list.
@@ -1679,7 +1679,7 @@ last("abc") // "c"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A> => number
+Array<A> | Set<A> | RecordType<unknown, A> | string => number
 ```
 
 Returns the number of values contained in the enumerable.
@@ -1723,7 +1723,7 @@ lessThan(1)(0) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType<A, B> => KeyedEnumerableType<B, A> => KeyedEnumerableType<B>
+MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => KeyedArray<B> | Set<B> | RecordType<B, unknown> | string
 ```
 
 Map over a keyed functor's keys and return a new keyed functor having mapped the keys
@@ -1760,7 +1760,7 @@ Would return:
 MapperFunctionType<A, MapperFunctionType<B, C>> =>
 ```
 ```
-  KeyedEnumerableType<B, A> =>
+  Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string =>
 ```
 ```
     KeyedEnumerableType<B, C>
@@ -1797,7 +1797,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType<A, B> => EnumerableType<A> => EnumerableType<B>
+MapperFunctionType<A, B> => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<B> | Set<B> | RecordType<B, unknown> | string
 ```
 
 A pretty standard `mapValues()`, but with enforced unary currying.
@@ -1830,7 +1830,7 @@ Which will return:
 MapperFunctionType<A, MapperFunctionType<B, C>> =>
 ```
 ```
-  KeyedEnumerableType<B, A> =>
+  Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string =>
 ```
 ```
     KeyedEnumerableType<B, C>
@@ -1849,7 +1849,7 @@ Just like map, but gives back the index argument (as an integer, not a string if
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<EnumerableType<A>> => EnumerableType<A>
+Array<Array<A> | Set<A> | RecordType<unknown, A> | string> => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Merges a list of enumerables (of the same type) into a single enumerable.
@@ -1870,7 +1870,7 @@ mergeAllLeft([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "b
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<EnumerableType<A>> => EnumerableType<A>
+Array<Array<A> | Set<A> | RecordType<unknown, A> | string> => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Merges a list of enumerables (of the same type) into a single enumerable.
@@ -1891,7 +1891,7 @@ mergeAllRight([{aaa: "aaa"}, {bbb: "bbb"}, {ccc: "ccc"}]) // {aaa: "aaa", bbb: "
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A> => EnumerableType<A> => EnumerableType<A>
+Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Recursively merges two enumerables. Merges objects with `merge` and arrays with concat. Prefers left. THAT IS ALL.
@@ -1966,7 +1966,7 @@ mergeDeepLeft(left)(right)
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A> => EnumerableType<A> => EnumerableType<A>
+Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Recursively merges two enumerables. Merges objects with `merge` and arras with concat. Prefers right. THAT IS ALL.
@@ -2042,7 +2042,7 @@ mergeDeepRight(left)(right)
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A> => EnumerableType<A> => EnumerableType<A>
+Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Merges two enumerables, preferring left.
@@ -2082,7 +2082,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A> => EnumerableType<A> => EnumerableType<A>
+Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Merges two enumerables, preferring right.
@@ -2122,7 +2122,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType<A, MapperFunctionType<A, A>> => EnumerableType<A> => EnumerableType<A> => EnumerableType<A>
+MapperFunctionType<A, MapperFunctionType<A, A>> => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Merges two enumerables and uses a provided function to handle conflicts. The function is given the the left value and the right value.
@@ -2208,7 +2208,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(MapperFunctionType<A, B> => EnumerableType<A> => EnumerableType<B>) =>
+(MapperFunctionType<A, B> => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<B> | Set<B> | RecordType<B, unknown> | string) =>
 ```
 ```
   MapperFunctionType<A, B> =>
@@ -2217,10 +2217,10 @@ Which returns:
     number =>
 ```
 ```
-      EnumerableType<A> =>
+      Array<A> | Set<A> | RecordType<unknown, A> | string =>
 ```
 ```
-        EnumerableType<A>
+        Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Takes a function (the application) that takes function(s) (later referred to as
@@ -2352,7 +2352,7 @@ of(null)("bbb")([]) // ["bbb"]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-ListType<A> => KeyedEnumerableType<B, A> => KeyedEnumerableType<B, A>
+Array<A> | Set<A> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string
 ```
 
 Reduces the keyed enumerable to an object with only the keys provided.
@@ -2403,7 +2403,7 @@ Will take an array of promises and returns a promise of only the resolved promis
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-ListType<[A, B]> => ListType<A>
+ListType<[A, B]> => Array<A> | Set<A>
 ```
 
 Takes an list that looks like a list of pairs (key, values) and returns all the keys.
@@ -2461,7 +2461,7 @@ You would get the following:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-ListType<[A, B]> => ListType<B>
+ListType<[A, B]> => Array<B> | Set<B>
 ```
 
 Takes an list that has pairs (key, values) and returns all the values.
@@ -2519,7 +2519,7 @@ You would get the following:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-PredicateFunctionType<A> => EnumerableType<A> => [EnumerableType<A>, EnumerableType<A>]
+PredicateFunctionType<A> => Array<A> | Set<A> | RecordType<unknown, A> | string => [Array<A> | Set<A> | RecordType<unknown, A> | string, Array<A> | Set<A> | RecordType<unknown, A> | string]
 ```
 
 This function takes an enumerable and returns an Array of two enumerables. The first of which contains elements which satisfy the predicate, the second of which contains element which do not.
@@ -2560,7 +2560,7 @@ pipe([append("b"), append("a")])("c") // "cba"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyChainType => KeyedEnumerableType<B, A> => Array<B>
+KeyChainType => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B>
 ```
 
 Given a keychain and records return the values at the keychain for each record.
@@ -2708,7 +2708,7 @@ range(0)(0) // 0
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-ReducerFunctionType<A, B | C, D> => C => EnumerableType<A> => D
+ReducerFunctionType<A, B | C, D> => C => Array<A> | Set<A> | RecordType<unknown, A> | string => D
 ```
 
 Reduce over a iterable's keys.
@@ -2740,7 +2740,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-ReducerFunctionType<A, B | C, D> => C => EnumerableType<A> => D
+ReducerFunctionType<A, B | C, D> => C => Array<A> | Set<A> | RecordType<unknown, A> | string => D
 ```
 
 Reduce over a iterable's values.
@@ -2772,7 +2772,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-ReducerFunctionType<A, B | D, C> => D => EnumerableType<A> => E
+ReducerFunctionType<A, B | D, C> => D => Array<A> | Set<A> | RecordType<unknown, A> | string => E
 ```
 
 Reduces over a functor, providing the reducer with the value and key.
@@ -2804,7 +2804,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-PredicateFunctionType<A> => EnumerableType<A> => EnumerableType<A>
+PredicateFunctionType<A> => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Takes an enumerable and a predicate, returning an enumerable with items that returned false from the predicate.
@@ -2842,7 +2842,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-OrderedEnumerableType<A> => OrderedEnumerableType<A>
+OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Returns all but the first item in an ordered list
@@ -2921,7 +2921,7 @@ reversal(isNull)(null) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-OrderedEnumerableType<A> => OrderedEnumerableType<A>
+OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Takes an ordered enumerable type and returns the reverse version of it.
@@ -2942,7 +2942,7 @@ reverse("abc") // "cba"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-OrderedEnumerableType<A> => A
+OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => A
 ```
 
 Takes an ordered enumerable and returns one random element.
@@ -2968,7 +2968,7 @@ sample(users()) // => {"id": 1, "name": "Kurtis Rainbolt-Greene"}
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-number => OrderedEnumerableType<A> => OrderedEnumerableType<A>
+number => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Takes an Array or string and randomly picks *n* elements to return, but never the same one.
@@ -2992,7 +2992,7 @@ sample(2)(users()) // => [{"id": 2, "name": "Angela Englund"}, {"id": 1, "name":
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-PredicateFunctionType<A> => EnumerableType<A> => EnumerableType<A>
+PredicateFunctionType<A> => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Given an enumerable and a predicate and produce the set or subset of that based on the predicate matched to the values.
@@ -3012,7 +3012,7 @@ selectByValue(isOdd)([1, 2, 3, 4]) // [1, 3]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<MapperFunctionType<A, B>> => A => EnumerableType<B>
+EnumerableType<MapperFunctionType<A, B>> => A => Array<B> | Set<B> | RecordType<B, unknown> | string
 ```
 ```
 Array<MapperFunctionType<A, B>> => A => Array<B>
@@ -3047,7 +3047,7 @@ sequence({x: increment, y: decrement, z: itself})(1) // {x: 2, y: 0, z: 1}
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-OrderedEnumerableType<A> => OrderedEnumerableType<A>
+OrderedArray<A> | Set<A> | RecordType<unknown, A> | string => OrderedArray<A> | Set<A> | RecordType<unknown, A> | string
 ```
 
 Takes an Ordered Functor and returns an Ordered Functor with the same content, but in a random order.
@@ -3143,7 +3143,7 @@ splat((a) => (b) => a + b)([1, 2]) // 3
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-TextType => (TextType | RegExp) => Array<TextType>
+string => (string | RegExp) => Array<string>
 ```
 
 Splits up a string by a delimiter.
@@ -3184,7 +3184,7 @@ startsWith("Hello")("Hello, world!") // true
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(TextType | Array<A | string>) =>
+(string | Array<A | string>) =>
 ```
 ```
  MapperFunctionType<B, PredicateFunctionType<A | string>> =>
@@ -3417,7 +3417,7 @@ supertype(new B()) // "A"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-number => OrderedEnumerableType<V> => OrderedEnumerableType<V>
+number => Array<V> | string => Array<V> | string
 ```
 
 Returns the first N of a list of ordered values.
@@ -3440,7 +3440,7 @@ takeFirst(1)("abc") // "a"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-number => OrderedEnumerableType<V> => OrderedEnumerableType<V>
+number => Array<V> | string => Array<V> | string
 ```
 
 Returns the last N of a list of ordered values.
@@ -3706,7 +3706,7 @@ upTo(10) // [1,2,3,4,5,6,7,8,9,10]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A> => Array<A>
+Array<A> | Set<A> | RecordType<unknown, A> | string => Array<A>
 ```
 
 Takes an iterable and returns it's values.
@@ -3727,7 +3727,7 @@ values(["aaa", "bbb"]) // ["aaa", "bbb"]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-PredicateFunctionType<A> => KeyedEnumerableType<B> => boolean
+PredicateFunctionType<A> => KeyedArray<B> | Set<B> | RecordType<B, unknown> | string => boolean
 ```
 
 Compares a Keyed Enumerable of Predicate Functions to a Enumerable of values. It is partial and prefers truthiness (meaning it only checks a key on the Functor if there is a key on the matcher).
@@ -3802,7 +3802,7 @@ where(
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-A => RecordType<A, B> => RecordType<A, B>
+A => Record<string | number | symbol, B> | Map<A, B> => Record<string | number | symbol, B> | Map<A, B>
 ```
 
 Returns a copy of an iterable without a key, no matter how deep the tree.
@@ -3847,7 +3847,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-Array<A> => RecordType<A, B> => RecordType<A, B>
+Array<A> => Record<string | number | symbol, B> | Map<A, B> => Record<string | number | symbol, B> | Map<A, B>
 ```
 
 Takes a enumerable that has keys and returns the same type where all the given keys don't exist.

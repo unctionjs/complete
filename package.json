@@ -20,7 +20,7 @@
   "main": "main.js",
   "module": "module.js",
   "browser": "browser.js",
-  "types": "types.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "index.ts",
     "main.js",
