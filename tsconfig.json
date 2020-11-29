@@ -3,9 +3,9 @@
     "node_modules"
   ],
   "compilerOptions": {
-    "noEmit": true,
     "esModuleInterop": true,
-    "strictNullChecks": true,
+    "noEmit": true,
     "strict": true
   }
 }
+
