@@ -177,7 +177,7 @@ always(1)(0) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-A => OrderedArray<B> | Set<B> | RecordType<B, unknown> | string => OrderedEnumerableType<C>
+A => OrderedArray<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string => Array<C> | string
 ```
 
 Takes a value and puts it at the end of the given list.
@@ -252,7 +252,7 @@ applicator(inc)(1) // 1
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<MapperFunctionType<A, B>, C> => EnumerableType<A, C> => EnumerableType<B, C>
+Array<MapperFunctionType<A, B>> | Set<MapperFunctionType<A, B>> | RecordType<C, MapperFunctionType<A, B>> => Record<string | number | symbol, A> | Map<C, A> => Record<string | number | symbol, B> | Map<C, B>
 ```
 
 Takes a list of functions and a list of values and applies the values to the functions.
@@ -376,7 +376,7 @@ But also logs:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-A => B => EnumerableType<B, A> => EnumerableType<B, A>
+A => B => Record<string | number | symbol, B> | Map<A, B> => Record<string | number | symbol, B> | Map<A, B>
 ```
 ```
 ObjectKeyType => ValueType => ObjectType => ObjectType
@@ -441,7 +441,7 @@ Credit: @keithamus
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<A | null> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string
+ListType<A | null> | RecordType<unknown, A | null> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string
 ```
 
 Takes a collection (Array or Object) and returns a copy of that value without `null` or `undefined` values.
@@ -488,7 +488,7 @@ compose([append("b"), append("a")])("c") // "cab"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType<A, B> => KeyChainType<C> => KeyedEnumerableType<A, C | B> => KeyedEnumerableType<A, C | B>
+MapperFunctionType<A, B> => KeyChainType<C> => Array<A> | Set<A> | RecordType<C | B, A> | string => Array<A> | Set<A> | RecordType<C | B, A> | string
 ```
 
 Given an object this function will return that object but with a new property, where the value is computed. The computation is given the object you'll be copying.
@@ -762,7 +762,7 @@ Returns both resolved and rejected promises as distinct lists.
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-B => KeyedEnumerableType<A, B> => KeyedEnumerableType<A, B>
+B => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string
 ```
 
 Takes a key and a keyed functor, returning the keyed functor without the key given.
@@ -806,7 +806,7 @@ first("abc") // "a"
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string | A> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string
+ListType<Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string | A> | RecordType<unknown, Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string | A> | string => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string
 ```
 
 Takes a multi-dimensional enumerable and decreases the nesting by one.
@@ -1614,7 +1614,7 @@ which would return
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyedEnumerableType<A, B> => Array<B>
+Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B>
 ```
 
 Takes a keyed iterable and returns the keys as an Array.
@@ -1723,7 +1723,7 @@ lessThan(1)(0) // false
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => KeyedArray<B> | Set<B> | RecordType<B, unknown> | string
+MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => KeyedArray<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string
 ```
 
 Map over a keyed functor's keys and return a new keyed functor having mapped the keys
@@ -1763,7 +1763,7 @@ MapperFunctionType<A, MapperFunctionType<B, C>> =>
   Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string =>
 ```
 ```
-    KeyedEnumerableType<B, C>
+    Array<B> | Set<B> | Record<string | number | symbol, B> | Map<C, B> | string
 ```
 
 Map over keys with the context of the value and key.
@@ -1797,7 +1797,7 @@ Would return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B> | Set<B> | RecordType<B, unknown> | string
+MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string
 ```
 
 A pretty standard `mapValues()`, but with enforced unary currying.
@@ -1833,7 +1833,7 @@ MapperFunctionType<A, MapperFunctionType<B, C>> =>
   Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string =>
 ```
 ```
-    KeyedEnumerableType<B, C>
+    Array<B> | Set<B> | Record<string | number | symbol, B> | Map<C, B> | string
 ```
 
 Just like map, but gives back the index argument (as an integer, not a string if array)
@@ -2173,7 +2173,7 @@ MapperFunctionType<L, MapperFunctionType<R, MapperFunctionType<K, V>>> =>
     KeyedEnumerableType<L, K> =>
 ```
 ```
-      KeyedEnumerableType<V, K>
+      ListType<V> | Record<string | number | symbol, V> | Map<K, V> | string
 ```
 
 Merges two keyed enumerables and uses a function to handle conflicts. The function is given the left value, the right value, and the key.
@@ -2208,7 +2208,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-(MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B> | Set<B> | RecordType<B, unknown> | string) =>
+(MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string) =>
 ```
 ```
   MapperFunctionType<A, B> =>
@@ -2331,7 +2331,7 @@ Which returns:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-A => B => EnumerableType<C, D> => EnumerableType<A, B>
+A => B => Record<string | number | symbol, C> | Map<D, C> => Record<string | number | symbol, B> | Map<B, A>
 ```
 
 Creates a enumerable based on a value and optional key.
@@ -2665,7 +2665,7 @@ Which will return:
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-A => OrderedEnumerableType<A | B> => OrderedEnumerableType<A | B>
+A => Array<A | B> | string => Array<A | B> | string
 ```
 
 Takes a value and puts it at the beginning of the given list.
@@ -3012,7 +3012,7 @@ selectByValue(isOdd)([1, 2, 3, 4]) // [1, 3]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-EnumerableType<MapperFunctionType<A, B>> => A => Array<B> | Set<B> | RecordType<B, unknown> | string
+Array<MapperFunctionType<A, B>> | Set<MapperFunctionType<A, B>> | Record<string | number | symbol, MapperFunctionType<A, B>> | Map<unknown, MapperFunctionType<A, B>> => A => Array<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string
 ```
 ```
 Array<MapperFunctionType<A, B>> => A => Array<B>
@@ -3727,7 +3727,7 @@ values(["aaa", "bbb"]) // ["aaa", "bbb"]
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-PredicateFunctionType<A> => KeyedArray<B> | Set<B> | RecordType<B, unknown> | string => boolean
+PredicateFunctionType<A> => KeyedArray<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string => boolean
 ```
 
 Compares a Keyed Enumerable of Predicate Functions to a Enumerable of values. It is partial and prefers truthiness (meaning it only checks a key on the Functor if there is a key on the matcher).
@@ -3869,7 +3869,7 @@ withoutKeys(["a", "b", "c"])(new Map([["b", 2], ["d", 3]])) // Map([["d", 3]]))
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-KeyedEnumerableType<R> => KeyedEnumerableType<L> => KeyedEnumerableType<[R, L]>
+ListType<R> | RecordType<unknown, R> | string => ListType<L> | RecordType<unknown, L> | string => ListType<[R, L]> | RecordType<unknown, [R, L]>
 ```
 
 Takes two iterables and merges them together, combining their values into an array
