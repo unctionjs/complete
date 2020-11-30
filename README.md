@@ -105,7 +105,7 @@ pipe([fetchResources, asStateTree])
 ![Dependencies][BADGE_DEPENDENCY]
 
 ```
-StringObjectType<T> => Promise<StringObjectType<T>>
+StringRecord<string | number | symbol, T> => Promise<StringRecord<string | number | symbol, T>>
 ```
 
 This takes an object where the values are probably promises and returns a promise that has that same object but with the resolved values.
