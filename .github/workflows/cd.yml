@@ -6,35 +6,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
-        node-version: 12
+        node-version: 14
+    - uses: actions/cache@v2
+      with:
+        # npm cache files are stored in `~/.npm` on Linux/macOS
+        path: ~/.npm
+        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-node-
     - run: npm install
+    - uses: actions/cache@v2
+      with:
+        path: "*.js"
+        key: ${{ runner.OS }}-build-${{ hashFiles('*.js') }}
+        restore-keys: |
+          ${{ runner.OS }}-build-
     - run: npm run build
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - run: npm run test
-  lint:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - run: npm run lint
-  typecheck:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - run: npm run typecheck
   publish-npm:
-    needs: [test, lint, typecheck]
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+        node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: npm publish
         env:
@@ -43,12 +41,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
           registry-url: https://npm.pkg.github.com/
-          scope: '@unctionjs'
+          scope: "@unction"
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

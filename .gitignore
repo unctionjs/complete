@@ -11,6 +11,7 @@
 /.nyc_output/
 browser.js
 main.js
+module.js
 
 # Log files
 *.log
